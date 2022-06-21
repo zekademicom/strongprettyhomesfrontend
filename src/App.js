@@ -1,9 +1,10 @@
+import SearchBar from "./components/users/home/search/searchbar";
 
 
 function App() {
   return (
     <div className="App">
-yasasin burdayim
+      <SearchBar/>
     </div>
   );
 }
