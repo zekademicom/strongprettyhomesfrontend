@@ -1,17 +1,30 @@
 import React from 'react'
-import PropertyCard from '../../components/users/common/property-card/PropertyCard'
-import PopularProperties from '../../components/users/home/popular-properties.js/popular-property'
-import Slider from '../../components/users/home/slider/slider'
+
+import PopularProperties from '../../components/user/home/popular-properties.js/popular-property';
+import Slider from '../../components/user/home/slider/slider'
+
+import Spacer from '../../components/user/common/spacer/spacer'
+import OurPartners from "../../components/user/common/OurPartners/OurPartners";
+import AdvanceSearch from "../../components/user/home/search/advance-search";
+import SearchBar from "../../components/user/home/search/searchbar";
+import StatusBar from "../../components/user/home/search/status-bar";
+
 
 
 const HomePage = () => {
   return (
-    <>
-  <Slider/>
-  <PopularProperties />
-    </>
+<>
 
-  )
-}
+     
+      <Slider/>
+    
+      <PopularProperties />
+      <OurPartners/>
+      
+
+</>
+
+)}
+
 
 export default HomePage

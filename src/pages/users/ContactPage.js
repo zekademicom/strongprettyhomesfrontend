@@ -1,11 +1,13 @@
 import React from 'react'
 
+
 const ContactPage = () => {
   return (
-<>
+    <>
+ 
 
-ContactPage
-    </>
+      </>
+
   )
 }
 

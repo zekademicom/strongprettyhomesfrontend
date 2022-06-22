@@ -1,0 +1,14 @@
+.contact-bar svg{
+    color:var(--color1);
+  
+}
+.contact-bar li{
+    gap:0.5rem;
+    align-items: center;
+    padding-bottom: 0.3rem;
+  
+}
+
+.contact-bar h4{
+    text-align: center;
+}

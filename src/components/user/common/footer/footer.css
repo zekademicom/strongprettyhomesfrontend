@@ -1,0 +1,39 @@
+.footer{
+    background-color: rgb(48, 61, 74);
+    padding: 4rem;
+    color: rgb(167, 167, 167);
+}
+ .footer a{
+    color: rgb(167, 167, 167);
+    text-decoration: none ;
+
+ }
+
+ .footer h3{
+    color: rgb(215,215,215);
+    display: block;
+
+ 
+
+ }
+
+ .footer .quicklinks li{
+    list-style: none;
+    padding:0.2rem;
+    text-align: -webkit-match-parent;
+   
+ 
+ 
+ }
+
+ .footer .quicklinks li svg{
+    color:var(--color1);
+   
+ }
+ .footer .quick{
+   padding-left: 2rem;
+ }
+
+
+
+ 

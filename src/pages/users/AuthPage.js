@@ -3,9 +3,8 @@ import React from 'react'
 
 const AuthPage = () => {
   return (
-<>
-AuthPage
-</>
+    <div>AuthPage</div>
+
   )
 }
 
