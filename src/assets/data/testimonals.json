@@ -1,0 +1,21 @@
+[
+    {
+        "image":".photo-1.jpg",
+        "messages":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum quidem facilis perspiciatis? Harum, illum illo tenetur doloribus molestias minima eaque dignissimos id ducimus delectus impedit sunt sit facere quos nisi.",
+        "names":"Noelene Meghan",
+        "titles":"CEO"
+    },
+    {
+        "image":"photo-2.jpg",
+        "messages":"Integer aliquam velit ut nibh mattis, et suscipit erat ultrices. Cras aliquam ante vel arcu suscipit, sit amet lobortis elit dignissim tempor vel.",
+        "names":"Alton Talbot",
+        "titles":"Manager"
+    },
+    {
+        "image":"photo-3.jpg",
+        "messages":"Suspendisse semper urna nec massa imperdiet consequat. Phasellus a hendrerit elit, vel maximus lacus. Sed eu quam laoreet, faucibus lorem non, aliquet diam.",
+        "names":"Bud Scotty",
+        "titles":"Sales Executive"
+    }
+]
+

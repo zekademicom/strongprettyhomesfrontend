@@ -1,0 +1,51 @@
+.navbar{
+  z-index: 5;
+  width:100%;
+  background-color: rgba(0, 0, 0, 0.644);
+  position: fixed !important;
+
+}
+.scroll{
+  background-color: rgba(100, 100, 100, 0);
+
+}
+
+.navbar .navbar-nav{
+    gap:5rem;
+    font-size: 1.3rem;
+}
+.navbar .nav-link{
+  padding:0.5rem 1rem !important;
+
+}
+.navbar .nav-link:hover{
+  color:var(--color1)!important;
+
+}
+.active {
+  color: var(--color1) !important;
+
+}
+
+
+@media(max-width: 1200px){
+  .navbar .navbar-collapse{
+      background-color:var(--color2);
+      border-radius: 1rem;
+      padding:2rem;
+      box-shadow: 0 0 15px black;
+      
+  }
+}
+
+
+
+.navbar-collapse .navbar-nav{
+  gap:0.3rem;
+
+}
+
+.navbar-collapse .nav-link{
+  padding:0;
+ 
+}
