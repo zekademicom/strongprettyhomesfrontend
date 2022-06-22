@@ -6,12 +6,8 @@ const ContactPage = () => {
     <>
  
 
-
-
-
-
-
       </>
+
   )
 }
 
