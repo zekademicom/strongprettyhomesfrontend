@@ -1,0 +1,37 @@
+
+.OurPartners{
+        text-align: center;
+        padding: 2rem;
+        display:block;
+        gap: 7rem;
+        font-size: 1.9rem;
+        list-style: none;
+        justify-content: center;
+       
+}
+/* .font{
+        font-family:  Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        
+} */
+.OurPartners h1::before{
+        content:"";
+        position: absolute ;
+        left: 37%;
+        margin-bottom: 0;
+        margin-left: 0;
+        margin-top: 0;
+        margin-right: 0;
+        padding: 0.7rem;
+        width:1.2rem;
+        height: 1.2rem;
+        background-color: var(--color1);
+        
+    }
+    .Partners{
+        padding: 2rem;
+        display: flex;
+        gap: 10rem;
+        font-size: 1.9rem;
+        list-style: none;
+        justify-content: center;
+    }
