@@ -1,14 +1,16 @@
-import SearchBar from "./components/users/home/search/searchbar";
-import StatusBar from "./components/users/home/search/status-bar";
+
+import CustomRoutes from "./router/custom-routes";
 
 
-function App() {
+
+
+const App = () => {
   return (
-    <div className="App">
-      <StatusBar/>
-      <SearchBar/>
-    </div>
-  );
+    <>
+<CustomRoutes/>
+
+</>
+  )
 }
 
 export default App;
