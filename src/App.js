@@ -1,16 +1,17 @@
 
+
 import CustomRoutes from "./router/custom-routes";
 
 
-
-
-const App = () => {
+function App() {
   return (
-    <>
-<CustomRoutes/>
+    <div className="App">
+      <CustomRoutes/>
+    
 
-</>
-  )
+    </div>
+  );
+
 }
 
 export default App;

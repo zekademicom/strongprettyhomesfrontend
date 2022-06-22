@@ -3,7 +3,7 @@
     display: flex;
     align-items: center;
     gap: 2rem;
-    padding-bottom: 20px;
+    padding-bottom: 10px;
     justify-content: center;
 
 }
@@ -15,6 +15,7 @@
     padding: 1rem 2rem;
     color: white;
     position: relative;
+    box-shadow: 0 0 10px rgb(86, 67, 67);
 }
 
 .search-bar .active:after{
@@ -28,4 +29,5 @@
     width: 0;
     height: 0;
     top: 100%;
+    
 }
