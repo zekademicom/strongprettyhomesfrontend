@@ -7,7 +7,7 @@ import { BsThreeDotsVertical } from "react-icons/bs";
 const SearchBar = () => {
   return (
 
-    <Container className="container-fluid" >
+    <Container className="container-fluid">
       <Row className="search-form g-5">
         <Col lg={3}>
         <input type="text" name="name" placeholder="Type something" size={30}/>
