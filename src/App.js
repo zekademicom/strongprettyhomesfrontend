@@ -1,12 +1,15 @@
-import SearchBar from "./components/users/home/search/searchbar";
-import StatusBar from "./components/users/home/search/status-bar";
+
+import Testimonals from "./components/users/home/testimonals/testimonals";
+import WhyUs from "./components/users/home/whyus/whyus";
 
 
 function App() {
   return (
     <div className="App">
-      <StatusBar/>
-      <SearchBar/>
+      
+        
+      <WhyUs/>
+      <Testimonals/>
     </div>
   );
 }

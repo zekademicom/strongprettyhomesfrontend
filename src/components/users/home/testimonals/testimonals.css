@@ -1,0 +1,38 @@
+.testimonals{
+    background-image: url("../../../../assets/img/bg/testimonals.jpg");
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: silver;
+    padding: 3rem;
+    position: relative;
+    text-align: center;
+}
+
+.testimonals:after {
+    background-color: #f0f8ff;
+    bottom: 0;
+    content: "";
+    left: 0;
+    opacity: 0.2;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.testimonals .testimonal {
+    display: inline-block;
+    text-align: center;
+    width: 300px;
+}
+
+.swiper-pagination-bullet-active {
+    background: white !important;
+}
+
+img{
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+}
+

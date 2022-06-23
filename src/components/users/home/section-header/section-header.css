@@ -1,0 +1,16 @@
+.section-header{
+    text-align: center;
+    position: relative;
+}
+
+.section-header h2{
+    font-weight: 600;
+}
+.section-header h2:before {
+    background-color: #ac4089;
+    content: "";
+    height: 20px;
+    position: absolute;
+    transform: translateX(-100%);
+    width: 20px;
+}

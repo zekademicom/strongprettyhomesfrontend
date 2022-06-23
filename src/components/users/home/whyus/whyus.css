@@ -1,0 +1,16 @@
+svg {
+    color: #ac4089;
+    font-size: 5rem;
+    text-align: center;
+}
+
+.card {
+    border: 1px solid;
+    border-color: gray;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.card .card-title {
+    margin: 2rem
+}
