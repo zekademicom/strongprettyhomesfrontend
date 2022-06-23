@@ -1,17 +1,14 @@
-
-import Testimonals from "./components/users/home/testimonals/testimonals";
-import WhyUs from "./components/users/home/whyus/whyus";
-
+import CustomRoutes from "./router/custom-routes";
 
 function App() {
   return (
     <div className="App">
       
-        
-      <WhyUs/>
-      <Testimonals/>
+      <CustomRoutes/>
+
     </div>
   );
+
 }
 
 export default App;

@@ -1,0 +1,20 @@
+:root{
+    --color1: #AC4089;
+    --color2: rgb(2, 17, 33);
+    --color3: rgba(2, 17, 33, 0.818);
+    
+
+}body{
+    font-family: montserrat;
+}
+.nav-tabs .nav-link{
+    color: var(--color1);
+}
+.navbar-collapse .navbar-nav{
+    gap:0.3rem;
+  }
+
+  .navbar-collapse .nav-link{
+    padding:0;
+  }
+
