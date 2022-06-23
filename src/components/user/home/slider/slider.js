@@ -1,7 +1,6 @@
 import React from "react";
 import { Carousel } from "react-bootstrap";
 import SearchBar from "../search/searchbar";
-import StatusBar from "../search/status-bar";
 import "./slider.css";
 import slides from "./slider.json";
 
@@ -16,8 +15,10 @@ const Slider = () => {
             style={{ backgroundImage: `url(${image})` }}
           >
             <Carousel.Caption>
-              <h3>{slide.title}</h3>
-              <p>{slide.desc}</p>
+              <div className="d-none d-lg-block">
+                <h3>{slide.title}</h3>
+                <p>{slide.desc}</p>
+              </div>
               <SearchBar />
             </Carousel.Caption>
           </Carousel.Item>

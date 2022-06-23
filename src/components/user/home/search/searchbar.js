@@ -22,7 +22,7 @@ const SearchBar = () => {
     <>
       <StatusBar />
       <div className="transparent">
-        <div className="search-bar">
+        <div className="search-bar ">
           <Row className="search-form g-3">
             <Col lg={2}>
               <Form.Group className="mb-3">
