@@ -2,8 +2,8 @@ import React from 'react'
 
 import PopularProperties from '../../components/user/home/popular-properties.js/popular-property';
 import Slider from '../../components/user/home/slider/slider'
-import Testimonals from "./components/users/home/testimonals/testimonals";
-import WhyUs from "./components/users/home/whyus/whyus";
+import Testimonals from "../../components/user/home/testimonals/testimonals";
+import WhyUs from "../../components/user/home/whyus/whyus";
 
 import Spacer from '../../components/user/common/spacer/spacer'
 import OurPartners from "../../components/user/common/OurPartners/OurPartners";
