@@ -1,31 +1,23 @@
 import React from "react";
-import "./OurPartners.css";
-
-
+import SectionHeader from "../../home/section-header/section-header";
+import "./ourpartners.css";
 
 const OurPartners = () => {
-  
   return (
-   <>
-    <section className="OurPartners">
-      <h1>Our Partners</h1>
-      <h4 className="font">We only work with the best companies around the globe</h4>
-    </section>
+    <>
+      <SectionHeader
+        title="Our Partners"
+        desc="We only work with the best companies around the globe"
+      />
 
-    
-
-<div className="Partners">
-  <img src = "img/partners/partner-01.png" />
-  <img src = "img/partners/partner-02.png" />
-  <img src = "img/partners/partner-03.png" />
-  <img src = "img/partners/partner-04.png" />
-  <img src = "img/partners/partner-05.png" />
-</div>
-
-    
- 
-  
- </>  
+      <div className="Partners">
+        <img src="img/partners/partner-01.png" />
+        <img src="img/partners/partner-02.png" />
+        <img src="img/partners/partner-03.png" />
+        <img src="img/partners/partner-04.png" />
+        <img src="img/partners/partner-05.png" />
+      </div>
+    </>
   );
 };
 
