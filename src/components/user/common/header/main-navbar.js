@@ -27,15 +27,13 @@ setstate(true);
   }
   window.addEventListener('scroll', changevalueonScroll);
 
-  
-
   return (
     <Navbar  expand="lg" className={state ? "navbar " : "scroll"} variant="dark ">
       <Container className=" " > 
         <Navbar.Brand as={Link} to="/">
           <img src={logo} alt="Strong Pretty Homes" />
         </Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Toggle aria-controls="basic-navbar-nav"/>
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="ms-auto">
             <Nav.Link

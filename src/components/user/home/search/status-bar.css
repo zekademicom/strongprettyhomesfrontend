@@ -5,7 +5,7 @@
     gap: 2rem;
     padding-bottom: 10px;
     justify-content: center;
-    
+    cursor: pointer;
 }
 
 .status-bar .passive{
@@ -16,6 +16,7 @@
     color: black !important;
     position: relative;
     box-shadow: 0 0 10px rgb(86, 67, 67);
+
 }
 
 .status-bar .active{
