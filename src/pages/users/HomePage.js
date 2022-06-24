@@ -12,7 +12,7 @@ const HomePage = () => {
 
      
       <Slider/>
-     <Spacer/>
+      <Spacer/>
       <PopularProperties />
      <Spacer/>
       <WhyUs/>

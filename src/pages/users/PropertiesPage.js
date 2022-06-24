@@ -1,10 +1,14 @@
 import React from 'react'
+import Spacer from '../../components/user/common/spacer/spacer'
+import Properties from '../../components/user/properties/properties'
 
 const PropertiesPage = () => {
   return (
 
 <>
-PropertiesPage
+<Spacer/>
+<Properties/>
+<Spacer/>
 </>
 
   )
