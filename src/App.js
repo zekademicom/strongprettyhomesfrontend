@@ -1,4 +1,5 @@
 import CustomRoutes from "./router/custom-routes";
+import "swiper/css/bundle";
 
 function App() {
   return (
