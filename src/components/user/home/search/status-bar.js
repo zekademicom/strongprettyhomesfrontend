@@ -10,9 +10,11 @@ const StatusBar = () => {
     setIsActive(true);
   }
   return (
-    <div className="search-bar">
-        <div  className={isActive ? 'active' : ''} onClick={handleClick}>Rent</div>
-        <div  className={isActive ? '' : 'active'} onClick={handleClick}>Sale</div>
+
+    <div className="status-bar">
+        <div className={isActive ? 'active' : 'passive'} onClick={handleClick}>Rent</div>
+        <div className={isActive ? 'passive' : 'active'} onClick={handleClick}>Sale</div>
+
       </div>
   )
 }
