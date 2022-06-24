@@ -17,7 +17,7 @@ const HomePage = () => {
 
      
       <Slider/>
-    
+    <Spacer/>
       <PopularProperties />
       <OurPartners/>
       

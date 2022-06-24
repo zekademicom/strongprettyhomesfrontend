@@ -13,8 +13,8 @@ const Slider = () => {
 				return (
 					<Carousel.Item key={index} style={{ backgroundImage: `url(${image})` }}>
 						<Carousel.Caption>
-							<h3>{slide.title}</h3>
-							<p>{slide.desc}</p>
+							<h3  className="d-none d-lg-block">{slide.title}</h3>
+							<p  className="d-none d-lg-block">{slide.desc}</p>
 							<StatusBar/>
      
       <SearchBar/>

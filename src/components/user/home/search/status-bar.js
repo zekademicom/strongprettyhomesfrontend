@@ -11,8 +11,8 @@ const StatusBar = () => {
   }
   return (
     <div className="search-bar">
-        <div className={isActive ? 'active' : ''} onClick={handleClick}>Rent</div>
-        <div className={isActive ? '' : 'active'} onClick={handleClick}>Sale</div>
+        <div  className={isActive ? 'active' : ''} onClick={handleClick}>Rent</div>
+        <div  className={isActive ? '' : 'active'} onClick={handleClick}>Sale</div>
       </div>
   )
 }
