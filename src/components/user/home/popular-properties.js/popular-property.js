@@ -6,7 +6,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper";
 import "swiper/css";
 import "swiper/css/pagination";
-import properties from "./property.json"
+import properties from "./property.json";
 
 const PopularProperties = () => {
   // const { propertyState } = useStore();
@@ -14,28 +14,36 @@ const PopularProperties = () => {
 
   return (
     <>
-    <section className="popular-property">
-    <Container>
-      <Row className="m-0">
-      <Col> 
-        <Swiper  style={{marginTop:"50px"}}
-        modules={[Pagination]}
-        // spaceBetween={25}
-        slidesPerView={3}
-        pagination={{ clickable: true }}
-        >
-        {properties.map((property, index) => (
-          
-          <SwiperSlide key={index}>
-          <PropertyCard property={property} />
-          </SwiperSlide>
-        ))}
+      <section className="popular-property">
+        <Container>
+
+        <Swiper spaceBetween={50} slidesPerView={3} loop={true} >
+          {properties.map((item, index) => (
+            <SwiperSlide key={index}>
+              <PropertyCard property={item} />
+            </SwiperSlide>
+          ))}
         </Swiper>
-      </Col>
-      </Row>
-    </Container>
-    </section>
-   </>
+
+          {/* <Row className="m-0 ">
+            <Col>
+              <Swiper
+                modules={[Pagination]}
+                // spaceBetween={25}
+                slidesPerView={3}
+                // pagination={{ clickable: true }}
+              >
+                {properties.map((property, index) => (
+                  <SwiperSlide key={index}>
+                    <PropertyCard property={property} />
+                  </SwiperSlide>
+                ))}
+              </Swiper>
+            </Col>
+          </Row> */}
+        </Container>
+      </section>
+    </>
   );
 };
 
