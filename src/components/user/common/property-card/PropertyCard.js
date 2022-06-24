@@ -7,19 +7,21 @@ import { MdLocationOn } from 'react-icons/md';
 import { CgHeart } from 'react-icons/cg';
 import './property-card.css';
 
-// import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const PropertyCard = ({property}) => {
 	const { id, title,type, price, description, bathrooms, bedrooms, location,area ,image} = property;
-	let imagesrc = require(`../../../../assets/img/properties/${image}`);
-	// const navigate = useNavigate();
+	// let imagesrc = require(`../../../../assets/img/properties/${image}`);
+	const navigate = useNavigate();
+	const imageSrc = `${process.env.REACT_APP_API_URL}/files/display/${image[0]}`;
 
 	return (
 		<>
-		<Card variant="top" className="property-card">
-			{/* onClick={()=> navigate(`/properties/${id}`)} */}
+		<Card variant="top" className="property-card"
+		 onClick={()=> navigate(`/properties/${id}`)}>
+			
 			<div className="image-container">
-				<Card.Img variant="top" src={imagesrc} />
+				<Card.Img variant="top" src={imageSrc} />
 				<span className="type">
 					<span>{type}</span>
 				</span>
