@@ -1,9 +1,18 @@
 .card-body{
-    margin-left: 1rem;
-}
+        gap: 0.4rem;
+        margin-top: 0;
+        margin-right: -12px;
+        margin-left: -12px;
+        padding: 0;     
+        text-align: start;
+        text-size-adjust: 100%; 
+        
+    }
 
 .contact{
-    padding-left: 1rem;
-    padding-top: 1rem;
-
+        gap: 0.6rem;
+        padding-bottom: 16px;
+        padding-left: 16px;
+        padding-right: 16px;
+        padding-top: 16px;
 }
