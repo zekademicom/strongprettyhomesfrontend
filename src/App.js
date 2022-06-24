@@ -5,7 +5,9 @@ import { useStore } from "./store";
 import { setProperties } from "./store/property/propertyActions";
 
 
-function App() {
+
+
+const App=()=> {
 
   const {dispatchProperty} = useStore();
 
@@ -28,11 +30,11 @@ function App() {
  
       
   return (
-    <div className="App">
+<>
       
       <CustomRoutes/>
 
-    </div>
+      </>
   );
 
 }
