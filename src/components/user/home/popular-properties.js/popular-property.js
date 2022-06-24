@@ -19,10 +19,10 @@ const PopularProperties = () => {
     <section className="popular-property">
     <Container>
       <Row className="m-0">
-      <Col > 
-        <Swiper
+      <Col> 
+        <Swiper  style={{marginTop:"50px"}}
         modules={[Pagination]}
-        // spaceBetween={250}
+        // spaceBetween={25}
         slidesPerView={3}
         pagination={{ clickable: true }}
         >

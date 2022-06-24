@@ -33,14 +33,14 @@ const PropertyCard = ({property}) => {
 			</div></div>
 		
 
-			<Card.Body className="card-body">
+			<Card.Body className="card-body ">
 				<Card.Title className="title">{title}</Card.Title>
 				<Card.Title className="desc">{description}</Card.Title>
 				<Card.Title className="location">
 					<MdLocationOn />{location}
 				</Card.Title>
 				<div>
-					<ul className="row g-4">
+					<ul className="row g-3">
 						<li className="col-4">
 							<RiHotelBedLine /> {bedrooms} beds
 						</li>
