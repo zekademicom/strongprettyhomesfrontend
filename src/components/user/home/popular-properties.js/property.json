@@ -1,0 +1,70 @@
+[
+    {
+        "title":"apartement",
+        "type":"For rent",
+    "price":750000,
+"description":"Renovated Apartement",
+"bathrooms":3,
+"bedrooms":3,
+"location":"luxembourg",
+"area":450,
+"image":"fp1.jpg"},
+
+
+{
+    "title":"apartement",
+    "type":"For rent",
+    "price":750000,
+"description":"Renovated Apartement",
+"bathrooms":3,
+"bedrooms":3,
+"location":"luxembourg",
+"area":450,
+"image":"fp2.jpg"},
+
+{
+    "title":"apartement",
+    "type":"For rent",
+    "price":750000,
+"description":"Renovated Apartement",
+"bathrooms":3,
+"bedrooms":3,
+"location":"luxembourg",
+"area":450,
+"image":"fp3.jpg"},
+
+{
+    "title":"apartement",
+    "type":"For rent",
+    "price":750000,
+"description":"Renovated Apartement",
+"bathrooms":3,
+"bedrooms":3,
+"location":"luxembourg",
+"area":450,
+"image":"fp2.jpg"},
+
+{
+    "title":"apartement",
+    "type":"For rent",
+    "price":750000,
+"description":"Renovated Apartement",
+"bathrooms":3,
+"bedrooms":3,
+"location":"luxembourg",
+"area":450,
+"image":"fp2.jpg"},
+
+{
+    "title":"apartement",
+    "type":"For rent",
+    "price":750000,
+"description":"Renovated Apartement",
+"bathrooms":3,
+"bedrooms":3,
+"location":"luxembourg",
+"area":450,
+"image":"fp2.jpg"}
+
+
+]
