@@ -32,3 +32,17 @@
 .property-bar .search-bar col{
     
 }
+ .search-form{
+
+
+flex-direction:column !important;
+
+}
+.search-bar{
+    display:flex;
+}
+.property-bars{
+    display:flex;
+  
+}
+

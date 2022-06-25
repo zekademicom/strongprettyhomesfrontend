@@ -10,31 +10,31 @@ const Properties = () => {
 	const { properties } = propertyState;
 
 	return (
-
-		<Container className="property-bar">
-		
-				<Row className="g-4">
+<>
+<div className="property-bars g-5">
+	<div className="search-bar ">	<SearchBar /></div>
+	<div >
+		<Container className="property-bar md-6 ">
+		<Row className="g-5">
 			
+		{/* <Col className="lg-3 search " >
 					
-				
-					<Col className="lg-3 " >
-						<SearchBar/>
-					</Col>
-					
-				
+					</Col> */}
+			
 					{properties.map((property, index) => (
-						<Col key={index}  className="lg-3"  style={{display: 'inline-block'}}>
+						<Col key={index} className="md-4 ">
 							
-							<PropertyCard property={property} lg={3}/>
+							<PropertyCard property={property}/>
 							
 						</Col>
 					))}
-				
-				
-				</Row>
 		
+			
+		</Row>
 		</Container>
-	
+	</div>
+	</div>
+	</>
 	);
 };
 
