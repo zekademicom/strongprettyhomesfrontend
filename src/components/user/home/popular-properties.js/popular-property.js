@@ -5,10 +5,10 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper";
 import "swiper/css";
 import "swiper/css/pagination";
+
 import { useStore } from "../../../../store";
 // import properties from "./property.json"
 // import "./popular-propert.css";
-
 
 
 const PopularProperties = () => {

@@ -6,7 +6,7 @@ const StatusBar = () => {
   const [isActive, setIsActive] = useState(false);
 
   const handleClick = event => {
-    setIsActive(true);
+    setIsActive(current => !current);
   }
   return (
 
