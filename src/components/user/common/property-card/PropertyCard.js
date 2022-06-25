@@ -52,7 +52,7 @@ const PropertyCard = ({ property }) => {
           <Card.Title className="title">{title}</Card.Title>
           <div className="title-home">
             <ul className="row desc-title-loc">
-              <li className="title">{title}</li>
+      
               <li className="desc">{description}</li>
               <li className="location">
                 <MdLocationOn />
@@ -78,10 +78,7 @@ const PropertyCard = ({ property }) => {
               </li>
             </ul>
           </div>
-          <Card.Text className="desc">{description}</Card.Text>
-            <Card.Text className="location">
-                <MdLocationOn />{location}
-            </Card.Text> 
+       
         </Card.Body>
       </Card>
    
