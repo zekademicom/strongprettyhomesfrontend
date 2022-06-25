@@ -8,9 +8,9 @@ const Properties = () => {
   const { properties } = propertyState;
   return (
     <Container>
-      <Row className="g-4">
+      <Row className="g-3 d-flex ">
         {properties.map((property, index) => (
-          <Col key={index} md={6} lg={3}>
+          <Col key={index} md={6} lg={4}>
             <PropertyCard property={property} />
           </Col>
         ))}
