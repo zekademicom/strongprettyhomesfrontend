@@ -11,6 +11,7 @@ const PropertiesPage = () => {
 <Spacer/>
 <Properties/>
 <Spacer/>
+
 </>
 
   )
