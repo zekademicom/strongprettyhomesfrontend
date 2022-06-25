@@ -11,16 +11,16 @@ const Properties = () => {
 
   return (
     <Container className="property-bar">
-      <Row className="g-4">
+      <Row className="g-3 d-flex ">
         <Col>
           <SearchBar />
         </Col>
         <Col>
-          {properties.map((property, index) => (
-            <Col key={index}>
-              <PropertyCard property={property} />
-            </Col>
-          ))}
+            {properties.map((property, index) => (
+              <Col key={index} md={6} lg={4}>
+                <PropertyCard property={property} />
+              </Col>
+         ))}
         </Col>
       </Row>
     </Container>

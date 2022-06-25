@@ -92,6 +92,69 @@ const PropertyCard = ({ property }) => {
       </Card>
     </>
   );
+
+
+		// <Card variant="top" className="property-card" onClick={()=> navigate(`/properties/${id}`)}>
+			
+		// 	<div className="image-container">
+		// 		<Card.Img variant="top" src={imageSrc} />
+		// 		<span className="type">
+		// 			<span>{type}</span>
+		// 		</span>
+     
+
+    //     <div class="bottom-features">
+
+		// 	<div class="price">${price}</div>
+		// 	<div class="like">	<CgHeart /></div>
+			
+		// 	</div></div>
+		
+
+		// 	<Card.Body className="card-body ">
+				
+		// 		<Card.Title className="title">{title}</Card.Title>
+		// 		<div className="title-home">
+		// 			<ul className="row desc-title-loc">
+		// 				<li className="title">{title}</li>
+		// 				<li className="desc">{description}</li>
+		// 				<li className="location"><MdLocationOn />{location}</li>
+		// 				<li>
+		// 				<div className="prop ">
+		// 			<ul className="row g-1">
+		// 				<li className="col-4">
+		// 					<RiHotelBedLine />{bedrooms} beds
+		// 				</li>
+		// 				<li className="col-4">
+		// 					<BiBath />{bathrooms} baths
+		// 				</li>
+		// 				<li className="col-4">
+		// 					<BsTextareaResize />{area} m²
+		// 				</li>
+		// 			</ul>
+		// 		</div>
+		// 		</li>
+		// 			</ul>
+		// 		</div>
+		// 		<Card.Text className="desc">{description}</Card.Text>
+		// 		<Card.Text className="location">
+		// 			<MdLocationOn />{location}
+		// 		</Card.Text>
+		// 		<div className="ul2">
+		// 			<ul className="row g-1">
+		// 				<li className="col-4">
+		// 					<RiHotelBedLine /> {bedrooms} beds
+		// 				</li>
+		// 				<li className="col-4">
+		// 					<BiBath /> {bathrooms} baths
+		// 				</li>
+		// 				<li className="col-4">
+		// 					<BsTextareaResize /> {area} m²
+		// 				</li>
+		// 			</ul>
+		// 		</div>
+		// 	</Card.Body>
+		// </Card>
 };
 
 export default PropertyCard;

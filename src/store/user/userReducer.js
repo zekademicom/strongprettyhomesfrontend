@@ -12,7 +12,6 @@ export const userReducer = (state = userInitialState, action) =>{
             isUserLogin: true
         }
     }
-    // user action  cebine alip birlestirip mevcut state mevcut ...state in icine atiyor 
 
     else if(action.type === types.LOGIN_FAILED){
         return {
