@@ -6,48 +6,58 @@ import { BsTextareaResize } from 'react-icons/bs';
 import { MdLocationOn } from 'react-icons/md';
 import { CgHeart } from 'react-icons/cg';
 import './property-card.css';
-// import { useNavigate } from "react-router-dom";
 
-const PropertyCard = () => {
-	// const { id, title, price, description, bathrooms, bedrooms, location,area } = property;
-	let image = require(`../../../../assets/img/properties/fp1.jpg`);
-	// const navigate = useNavigate();
+
+import { useNavigate } from "react-router-dom";
+
+const PropertyCard = ({property}) => {
+	const { id, title,type, price, description, bathrooms, bedrooms, location,area ,image} = property;
+	// let imagesrc = require(`../../../../assets/img/properties/${image}`);
+	const navigate = useNavigate();
+	const imageSrc = `${process.env.REACT_APP_API_URL}/files/display/${image[0]}`;
 
 	return (
-		<Card variant="top" className="property-card">
-			{/* onClick={()=> navigate(`/properties/${id}`)} */}
+		<>
+		<Card variant="top" className="property-card"
+		 onClick={()=> navigate(`/properties/${id}`)}>
+			
 			<div className="image-container">
-				<Card.Img variant="top" src={image} />
+				<Card.Img variant="top" src={imageSrc} />
 				<span className="type">
-					<span>For rent</span>
+					<span>{type}</span>
 				</span>
      
 
-        <div class="bottom-features"><div class="price">$78000</div><div class="like">	<CgHeart />
-        </div></div></div>
+        <div class="bottom-features">
+
+			<div class="price">${price}</div>
+			<div class="like">	<CgHeart /></div>
+			
+			</div></div>
 		
 
-			<Card.Body className="card-body">
-				<Card.Title className="title">Apartement</Card.Title>
-				<Card.Title className="desc">Renovated Apartement</Card.Title>
+			<Card.Body className="card-body ">
+				<Card.Title className="title">{title}</Card.Title>
+				<Card.Title className="desc">{description}</Card.Title>
 				<Card.Title className="location">
-					<MdLocationOn />location jfheka;ask'jkdllk;sls
+					<MdLocationOn />{location}
 				</Card.Title>
 				<div>
-					<ul className="row g-4">
+					<ul className="row g-3">
 						<li className="col-4">
-							<RiHotelBedLine />beds
+							<RiHotelBedLine /> {bedrooms} beds
 						</li>
 						<li className="col-4">
-							<BiBath /> baths
+							<BiBath /> {bathrooms} baths
 						</li>
 						<li className="col-4">
-							<BsTextareaResize /> area m²
+							<BsTextareaResize /> {area} m²
 						</li>
 					</ul>
 				</div>
 			</Card.Body>
 		</Card>
+</>
 	);
 };
 

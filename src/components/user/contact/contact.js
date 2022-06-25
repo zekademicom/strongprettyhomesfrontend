@@ -8,7 +8,6 @@ const Contact = () => {
     <div>
       <Container>
         <Row>
-          <Col md={12}></Col>
           <Col md={12}>
             <Card className="contact">
               <h3>Contact Us</h3>

@@ -1,6 +1,7 @@
 import { types } from "../types";
 import { userInitialState } from "./userInitialState";
 
+// burada kritik nokta return ettigi anda merkezi sistemi degistiriyor render
 
 export const userReducer = (state = userInitialState, action) =>{
 
@@ -15,7 +16,7 @@ export const userReducer = (state = userInitialState, action) =>{
     else if(action.type === types.LOGIN_FAILED){
         return {
             ...state,
-            user: {},
+            user: {},/*basarisiz olma durumunda user bosalt bir sey donderme*/
             isUserLogin: false
         }
     }
@@ -29,3 +30,5 @@ export const userReducer = (state = userInitialState, action) =>{
     }
 
 }
+// 4-reducer stateleri degistirme kabiliyetine sahip bir fonc yani initialstate i degisitiri actioni alip state degistirir action ise state in ne sekilde guncellenecegini belirler
+// 5=>index
