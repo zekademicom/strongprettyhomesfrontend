@@ -11,8 +11,6 @@ import { useStore } from "../../../../store";
 // import "./popular-propert.css";
 
 
-import { useStore } from "../../../../store";
-
 const PopularProperties = () => {
 
   const { propertyState } = useStore();

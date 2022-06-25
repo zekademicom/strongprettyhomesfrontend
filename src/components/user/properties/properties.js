@@ -12,10 +12,10 @@ const Properties = () => {
   return (
     <Container className="property-bar">
       <Row className="g-3 d-flex ">
-        <Col>
+        <Col lg={3}>
           <SearchBar />
         </Col>
-        <Col>
+        <Col lg={9}>
             {properties.map((property, index) => (
               <Col key={index} md={6} lg={4}>
                 <PropertyCard property={property} />
