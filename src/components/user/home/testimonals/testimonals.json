@@ -1,0 +1,22 @@
+[
+    {
+        "name":"Noelene Meghan",
+        "title":"CEO",
+        "message":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum quidem facilis perspiciatis? Harum, illum illo tenetur doloribus molestias minima eaque dignissimos id ducimus delectus impedit sunt sit facere quos nisi.",
+        "image":"photo-1.jpg"
+    },
+
+    {
+        "name":"Alton Talbot",
+        "title":"Manager",
+        "message":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum quidem facilis perspiciatis? Harum, illum illo tenetur doloribus molestias minima eaque dignissimos id ducimus delectus impedit sunt sit facere quos nisi.",
+        "image":"photo-2.jpg"
+    },
+
+    {
+        "name":"Bud Scotty",
+        "title":"Sales Executive",
+        "message":"Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum quidem facilis perspiciatis? Harum, illum illo tenetur doloribus molestias minima eaque dignissimos id ducimus delectus impedit sunt sit facere quos nisi.",
+        "image":"photo-3.jpg"
+    }
+]

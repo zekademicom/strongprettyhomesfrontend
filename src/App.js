@@ -1,15 +1,19 @@
-
-
+import { ToastContainer } from "react-toastify";
 import CustomRoutes from "./router/custom-routes";
 
+const App = () => {
 
-function App() {
+
+
+
   return (
-    <div className="App">
-      <CustomRoutes/>
     
-
-    </div>
+<>
+      <CustomRoutes/>
+      <ToastContainer/>
+    
+      </>
+  
   );
 
 }

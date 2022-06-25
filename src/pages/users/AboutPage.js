@@ -1,8 +1,8 @@
 import React from "react";
 
-
 const AboutPage = () => {
   return (
+
     <>
     
     </>
@@ -10,3 +10,4 @@ const AboutPage = () => {
 };
 
 export default AboutPage;
+
