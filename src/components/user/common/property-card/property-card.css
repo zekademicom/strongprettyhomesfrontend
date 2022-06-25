@@ -1,18 +1,17 @@
 .property-card .image-container {
 	position: relative;
-	padding: 0.8rem;
-	top: 0.1rem;
+	padding: 0.5rem;
 }
 .property-card .image-container img {
 	border-radius: 0.5rem;
 }
 .property-card {
-	width: 18.5rem;
-
 	cursor: pointer;
 	border-radius: 0.5rem !important;
 	border-style: solid;
 	border-color: var(--color1) transparent transparent transparent;
+	display:flex;
+width: 17.5rem;
 }
 .property-card .card-body {
 	padding-top: 0.1rem;
@@ -56,6 +55,17 @@
 	left: 20px;
 	right: 20px;
 	color: white;
+}
+.property-card .prop {
+	/* text-align: center; */
+	/* justify-content: space-between; */
+	margin:auto;
+	padding:auto;
+	left:0;
+	padding-left:0rem;
+	gap:1rem;
+	background-color:red;
+
 }
 
 .property-card .bottom-features .price {

@@ -18,12 +18,20 @@ const PopularProperties = () => {
     <>
     <section className="popular-property">
     <Container>
-      <Row className="m-0">
-      <Col className="d-mg-block" > 
-        <Swiper 
+      <Row >
+      <Col > 
+        <Swiper
+        breakpoints={{
+          640: {
+            slidesPerView: 2,
+          },
+          768: {
+            slidesPerView: 3,
+          },
+        }}
         modules={[Pagination]}
-        // spaceBetween={25}
-        slidesPerView={3}
+        spaceBetween={-80}
+        // slidesPerView={3}
         // pagination={{ clickable: true }}
         >
         {properties.map((property, index) => (
