@@ -21,6 +21,7 @@ const PropertyCard = ({ property }) => {
     location,
     area,
     image,
+    currentPath,
   } = property;
   // let imagesrc = require(`../../../../assets/img/properties/${image}`);
   const navigate = useNavigate();
@@ -48,7 +49,7 @@ const PropertyCard = ({ property }) => {
           </div>
         </div>
         <Card.Body className="card-body ">
-          {/* <Card.Title className="title">{title}</Card.Title> */}
+          <Card.Title className="title">{title}</Card.Title>
           <div className="title-home">
             <ul className="row desc-title-loc">
               <li className="title">{title}</li>
@@ -77,23 +78,10 @@ const PropertyCard = ({ property }) => {
               </li>
             </ul>
           </div>
-          {/* <Card.Text className="desc">{description}</Card.Text>
+          <Card.Text className="desc">{description}</Card.Text>
             <Card.Text className="location">
                 <MdLocationOn />{location}
-            </Card.Text> */}
-          {/* <div className="ul2">
-                <ul className="row g-1">
-                    <li className="col-4">
-                        <RiHotelBedLine /> {bedrooms} beds
-                    </li>
-                    <li className="col-4">
-                        <BiBath /> {bathrooms} baths
-                    </li>
-                    <li className="col-4">
-                        <BsTextareaResize /> {area} m²
-                    </li>
-                </ul>
-            </div> */}
+            </Card.Text> 
         </Card.Body>
       </Card>
    
