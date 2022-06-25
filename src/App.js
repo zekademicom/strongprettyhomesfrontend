@@ -1,9 +1,9 @@
+import { ToastContainer } from "react-toastify";
 import { useEffect } from "react";
 import { getProperties } from "./api/property-service";
 import CustomRoutes from "./router/custom-routes";
 import { useStore } from "./store";
 import { setProperties } from "./store/property/propertyActions";
-
 
 
 
@@ -33,6 +33,7 @@ const App=()=> {
 <>
       
       <CustomRoutes/>
+      <ToastContainer/>
 
       </>
   );
