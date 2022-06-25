@@ -1,32 +1,23 @@
 import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
-// import { useStore } from "../../../../store";
 import PropertyCard from "../../common/property-card/PropertyCard";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper";
 import "swiper/css";
 import "swiper/css/pagination";
-import properties from "./property.json";
+
+import { useStore } from "../../../../store";
 
 const PopularProperties = () => {
-  // const { propertyState } = useStore();
-  // const { properties } = propertyState;
+  const { propertyState } = useStore();
+  const { properties } = propertyState;
 
   return (
     <>
       <section className="popular-property">
         <Container>
-
-        <Swiper spaceBetween={50} slidesPerView={3} loop={true} >
-          {properties.map((item, index) => (
-            <SwiperSlide key={index}>
-              <PropertyCard property={item} />
-            </SwiperSlide>
-          ))}
-        </Swiper>
-
-          {/* <Row className="m-0 ">
-            <Col>
+          <Row className="m-0">
+            <Col className="d-mg-block">
               <Swiper
                 modules={[Pagination]}
                 // spaceBetween={25}
@@ -40,7 +31,7 @@ const PopularProperties = () => {
                 ))}
               </Swiper>
             </Col>
-          </Row> */}
+          </Row>
         </Container>
       </section>
     </>

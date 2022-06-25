@@ -1,0 +1,34 @@
+:root{
+    --color1: #AC4089;
+    --color2: rgb(2, 17, 33);
+    --color3: rgba(2, 17, 33, 0.818);
+    
+}
+
+.property-bar .search-bar{
+    margin-top: 0;
+    margin-left: -40px;
+    margin-right: 50px;
+}
+
+.property-bar .search-form{
+    flex-direction: column;
+}
+
+.property-bar .status-bar{
+    justify-content: left;
+    gap: 1rem;
+    margin-top: 50px;
+}
+
+.property-bar .status-bar .active{
+    padding: 0.5rem 1rem;
+}
+
+.property-bar .status-bar .passive{
+    padding: 0.5rem 1rem;
+}
+
+.property-bar{
+    width: ;
+}
