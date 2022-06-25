@@ -18,11 +18,13 @@
   text-size-adjust :100%;
 }
 .property-card{
+
   width: 22rem;
    height: 24rem; 
   cursor:pointer;
   border-radius: 0.8rem !important;
   border:grey; 
+
 }
 .property-card ul{
   list-style: none;
