@@ -20,9 +20,9 @@ const SearchBar = () => {
 
   return (
     <>
-      <StatusBar />
-      <div className="transparent">
-        <div className="search-bar ">
+      <div>
+        <StatusBar />
+        <div className="search-bar transparent">
           <Row className="search-form g-3">
             <Col lg={2}>
               <Form.Group className="mb-3">
