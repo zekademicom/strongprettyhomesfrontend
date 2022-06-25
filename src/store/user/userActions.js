@@ -1,9 +1,10 @@
 import { types } from "../types"
 
-export const loginSuccess = (user) =>  ({/**user backenden geliyor */
+
+export const loginSuccess = (user) =>  ({
     type: types.LOGIN_SUCCESS,
     payload: user
-    // buranin amaci user parametresini alip user tekrar dondermek
+
 });
 
 export const loginFailed = () =>  ({
@@ -17,3 +18,4 @@ export const logout = () =>  ({
 // 3-action aslinda bir fonc.initialstate in icine yerlestirilecek yapiyi hazirlayan bir fonc bir metod
 // initialstate deki user i burada parametre olarak aliyor ama duruma gore almayabilir de.
 // icindeki payload datalari transfer ederken kullanilan kavramlardan bir tanesi 4->Reducer
+

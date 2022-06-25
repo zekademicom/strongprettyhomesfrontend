@@ -10,7 +10,9 @@ import { useStore } from "../../../../store";
 // import "./popular-propert.css";
 
 
+
 const PopularProperties = () => {
+
   const { propertyState } = useStore();
   const { properties } = propertyState;
 
@@ -46,6 +48,7 @@ const PopularProperties = () => {
     </Container>
     </section>
    </>
+
   );
 };
 

@@ -10,6 +10,7 @@ import {
 } from "react-icons/ri";
 import { Link, useLocation } from "react-router-dom";
 import "./main-navbar.css";
+import UserMenu from "./user-menu";
 
 const MainNavbar = () => {
   const location = useLocation();
@@ -27,10 +28,8 @@ setstate(true);
   }
   window.addEventListener('scroll', changevalueonScroll);
 
-  
-
   return (
-    <Navbar  expand="lg" className={state ? "navbar " : "scroll"} variant="dark ">
+    <Navbar  expand="xl" className={state ? "navbar " : "scroll"} variant="dark ">
       <Container className=" " > 
         <Navbar.Brand as={Link} to="/">
           <img src={logo} alt="Strong Pretty Homes" />
@@ -66,9 +65,7 @@ setstate(true);
             >
               <RiMapPinLine /> Contact
             </Nav.Link>
-            <Nav.Link as={Link} to="/auth">
-            <RiUser3Line/> Login/Register
-          </Nav.Link>
+                <UserMenu/>
           </Nav>
         </Navbar.Collapse>
       </Container>

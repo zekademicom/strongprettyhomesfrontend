@@ -14,6 +14,7 @@ const Store = createContext();
 export const useStore = () => useContext(Store);
 
 export const StoreProvider = ({ children }) => {
+
   const [userState, dispatchUser] = useReducer(userReducer, userInitialState);/*2.usereducer bizim tanimladigimiz */
   // vehicle tanımlaması
   const [propertyState,dispatchProperty] = useReducer(propertyReducer,propertyInitialState);
