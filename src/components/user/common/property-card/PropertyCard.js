@@ -6,6 +6,7 @@ import { BsTextareaResize } from 'react-icons/bs';
 import { MdLocationOn } from 'react-icons/md';
 import { CgHeart } from 'react-icons/cg';
 import './property-card.css';
+
 import { useNavigate } from "react-router-dom";
 
 const PropertyCard = ({property}) => {
