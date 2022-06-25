@@ -28,6 +28,7 @@ const PropertyCard = ({ property }) => {
 
   return (
     <>
+ 
       <Card
         variant="top"
         className="property-card"
@@ -95,6 +96,7 @@ const PropertyCard = ({ property }) => {
             </div> */}
         </Card.Body>
       </Card>
+   
     </>
   );
 };

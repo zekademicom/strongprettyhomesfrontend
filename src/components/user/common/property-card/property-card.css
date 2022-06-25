@@ -6,7 +6,7 @@ border-radius: 1.3rem;
 padding:0.8rem;
 }
 .property-card{
-    width: 22rem;
+    /* width: 22rem; */
     /* height: 24rem; */
     cursor:pointer;
     border-radius: 0.5rem !important;
