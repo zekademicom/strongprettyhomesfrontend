@@ -7,7 +7,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import { useStore } from "../../../../store";
 // import properties from "./property.json"
-
+// import "./popular-propert.css";
 
 
 const PopularProperties = () => {
@@ -28,7 +28,7 @@ const PopularProperties = () => {
         >
         {properties.map((property, index) => (
           
-          <SwiperSlide key={index}>
+          <SwiperSlide key={index} md={6} lg={4} >
           <PropertyCard property={property} />
           </SwiperSlide>
         ))}
