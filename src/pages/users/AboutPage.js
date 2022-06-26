@@ -21,6 +21,7 @@ const AboutPage = () => {
     <Spacer/>
     <OurPartners/>
     <Spacer/>
+
     </>
   );
 };
