@@ -1,6 +1,5 @@
 import React from "react";
 import { Col, Container, Row, Card } from "react-bootstrap";
-import ContactForm from "./contact-form";
 import "./contact.css"
 
 
@@ -9,10 +8,7 @@ const Contact = () => {
     <div>
       <Container>
         <Row>
-          <Col md={8}>
-            <ContactForm />
-          </Col>
-          <Col md={4}>
+          <Col md={12}>
             <Card className="contact">
               <h3>Contact Us</h3>
               <p>
