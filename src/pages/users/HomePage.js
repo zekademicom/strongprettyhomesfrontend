@@ -6,6 +6,7 @@ import WhyUs from "../../components/user/home/whyus/whyus";
 import Spacer from "../../components/user/common/spacer/spacer";
 import OurPartners from "../../components/user/common/ourPartners/OurPartners";
 
+
 const HomePage = () => {
   return (
     <>
