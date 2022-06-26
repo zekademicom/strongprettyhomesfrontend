@@ -19,10 +19,10 @@ const PopularProperties = () => {
   return (
     <>
     <section className="popular-property">
-    <Container>
+    <Container className="">
      
    
-        <Swiper 
+        <Swiper className="swiper-popular"
 
         breakpoints={{
           100: {
@@ -37,13 +37,13 @@ const PopularProperties = () => {
           
         }}
         modules={[Pagination]}
-        // spaceBetween={-20}
+        // spaceBetween={180}
         slidesPerView={3}
         // pagination={{ clickable: true }}
         >
         {properties.map((property, index) => (
           
-          <SwiperSlide key={index} >
+          <SwiperSlide key={index} className="swipers">
           <PropertyCard property={property}  />
           </SwiperSlide>
         ))}
