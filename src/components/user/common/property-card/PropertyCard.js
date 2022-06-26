@@ -4,7 +4,7 @@ import { BiBath } from "react-icons/bi";
 import { RiHotelBedLine } from "react-icons/ri";
 import { BsTextareaResize } from "react-icons/bs";
 import { MdLocationOn } from "react-icons/md";
-import { CgHeart } from "react-icons/cg";
+// import { CgHeart } from "react-icons/cg";
 import "./property-card.css";
 
 import { useNavigate } from "react-router-dom";
@@ -20,16 +20,15 @@ const PropertyCard = ({ property }) => {
     bedrooms,
     location,
     area,
-    image,
-    currentPath,
+    image
   } = property;
-  // let imagesrc = require(`../../../../assets/img/properties/${image}`);
+
   const navigate = useNavigate();
   const imageSrc = `${process.env.REACT_APP_API_URL}/files/display/${image[0]}`;
 
   return (
     <>
- 
+
       <Card
         variant="top"
         className="property-card"
@@ -40,48 +39,34 @@ const PropertyCard = ({ property }) => {
           <span className="type">
             <span>{type}</span>
           </span>
-          <div class="bottom-features">
-            <div class="price">${price}</div>
-            <div class="like">
+
+          {/* <div class="bottom-features"> */}
+          <div class="price">${price}</div>
+          {/* <div class="like">
               {" "}
               <CgHeart />
-            </div>
-          </div>
+            </div> */}
+          {/* </div> */}
         </div>
+
         <Card.Body className="card-body ">
-          <Card.Title className="title">{title}</Card.Title>
-          <div className="title-home">
-            <ul className="row desc-title-loc">
-      
-              <li className="desc">{description}</li>
-              <li className="location">
-                <MdLocationOn />
-                {location}
-              </li>
-              <li>
-                <div className="prop ">
-                  <ul className="row g-1">
-                    <li className="col-4">
-                      <RiHotelBedLine />
-                      {bedrooms} beds
-                    </li>
-                    <li className="col-4">
-                      <BiBath />
-                      {bathrooms} baths
-                    </li>
-                    <li className="col-4">
-                      <BsTextareaResize />
-                      {area} m²
-                    </li>
-                  </ul>
-                </div>
-              </li>
-            </ul>
+
+          <div className="card-items">
+            <div className="title">{title}</div>
+            <h2 className="desc">{description}</h2>
+            <div className="location"><MdLocationOn />
+              {location}</div>
           </div>
-       
+          <div className="props">
+            <span> <RiHotelBedLine />
+              {bedrooms}  beds</span>
+            <span> <BiBath />
+              {bathrooms}  baths</span>
+            <span> <BsTextareaResize />
+              {area}  m²</span>
+          </div>
         </Card.Body>
       </Card>
-   
     </>
   );
 };

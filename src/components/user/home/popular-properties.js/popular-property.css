@@ -1,6 +1,29 @@
-div .swiper .swiper-initialized .swiper-horizontal .swiper-backface-hidden{
+/* div .swiper .swiper-initialized .swiper-horizontal .swiper-backface-hidden{
     text-align: center !important;
    
+} */
+.swiper .swiper-popular .swiper-initialized .swiper-horizontal .swiper-backface-hidden{
+    /* width: 100rem; */
+    text-align: center !important;
+    
+}
+.swiper-popular {
+    box-sizing: content-box;
+    display: flex;
+    height: 100%;
+    position: relative;
+    width: 100%;
+    z-index: 1;
+}
+.swipers{
+
+    list-style: none;
+    /* margin-left: auto;
+    margin-right: auto; */
+    overflow: hidden;
+    padding: 0;
+    position: relative;
+    z-index: 1;
 }
 
 

@@ -31,12 +31,12 @@ const SearchBar = () => {
         <StatusBar />
         <div className="search-bar transparent">
           <Row className="search-form g-3">
-            <Col   className={currentPath === "/" ? "lg-2" : "lg-12"}>
+            <Col   className="lg-2">
               <Form.Group className="mb-3">
                 <Form.Control type="text" placeholder="Type something" />
               </Form.Group>
             </Col>
-            <Col className={currentPath === "/" ? "lg-2" : "lg-12"}>
+            <Col className="lg-2">
               <Form.Group className="mb-2">
                 <Form.Select id="disabledSelect">
                   <option>Category</option>
@@ -46,17 +46,17 @@ const SearchBar = () => {
                 </Form.Select>
               </Form.Group>
             </Col>
-            <Col className={currentPath === "/" ? "lg-2" : "lg-12"}>
+            <Col className="lg-2">
               <Form.Group className="mb-3">
                 <Form.Control type="text" placeholder="Min Price" />
               </Form.Group>
             </Col>
-            <Col className={currentPath === "/" ? "lg-2" : "lg-12"}>
+            <Col className="lg-2">
               <Form.Group className="mb-3">
                 <Form.Control type="text" placeholder="Max Price" />
               </Form.Group>
             </Col>
-            <Col className={currentPath === "/" ? "lg-2" : "lg-12"}>
+            <Col className="lg-2">
               <ToggleButton
                 className="advance-search-btn"
                 onClick={() => setOpen(!open)}
@@ -67,7 +67,7 @@ const SearchBar = () => {
               </ToggleButton>
               <span>&nbsp;&nbsp; Advanced</span>
             </Col>
-            <Col className={currentPath === "/" ? "lg-2" : "lg-12"}>
+            <Col className="lg-2">
               <Button className="btn btn-lg" variant="primary" type="button">
                 <AiOutlineSearch /> Search
               </Button>
