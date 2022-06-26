@@ -28,10 +28,10 @@ const PropertyCard = ({property}) => {
 				</span>
      
 
-        <div class="bottom-features">
+        <div className="bottom-features">
 
-			<div class="price">${price}</div>
-			<div class="like">	<CgHeart /></div>
+			<div className="price">${price}</div>
+			<div className="like">	<CgHeart /></div>
 			
 			</div></div>
 		
