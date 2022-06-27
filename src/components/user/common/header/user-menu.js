@@ -29,8 +29,8 @@ const UserMenu = () => {
   return (
     <>
       {isUserLogin ? (
-        <NavDropdown title={`${user.firstName} ${user.lastName}`} align="end">
-          {user.roles.includes("Administrator") && (
+     <NavDropdown title={`${user.firstName} ${user.lastName}`} align="end">
+               {user.role.includes("Administrator") && (
             <>
               <NavDropdown.Item as={Link} to="/admin">
                 Admin Panel
@@ -38,8 +38,8 @@ const UserMenu = () => {
               <NavDropdown.Divider />
             </>
           )}
-
-          <NavDropdown.Item as={Link} to="/user/reservations">
+           
+           <NavDropdown.Item as={Link} to="/user/reservations">
             Reservations
           </NavDropdown.Item>
           <NavDropdown.Item as={Link} to="/user">
@@ -48,6 +48,8 @@ const UserMenu = () => {
           <NavDropdown.Divider />
           <NavDropdown.Item onClick={handleLogout}>Logout</NavDropdown.Item>
         </NavDropdown>
+      
+     
       ) : (
         <Nav.Link as={Link} to="/auth">
           <RiUserLine /> Login/Register

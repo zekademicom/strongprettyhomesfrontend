@@ -9,12 +9,14 @@ import {
   ToggleButton,
   Collapse,
 } from "react-bootstrap";
-import "./searchbar.css";
+
 import { AiOutlineSearch } from "react-icons/ai";
 import { BsThreeDotsVertical } from "react-icons/bs";
 import AdvanceSearch from "./advance-search";
 import StatusBar from "./status-bar";
 import { useLocation } from "react-router-dom";
+import "./searchbar.css";
+
 
 const SearchBar = () => {
   const [open, setOpen] = useState(false);
@@ -27,7 +29,10 @@ const SearchBar = () => {
 
   return (
     <>
-      <div>
+
+    <div className="bar ">
+      <div >
+
         <StatusBar />
         <div className="search-bar transparent">
           <Row className="search-form g-3">
@@ -58,7 +63,7 @@ const SearchBar = () => {
             </Col>
             <Col className="lg-2">
               <ToggleButton
-                className="advance-search-btn"
+                className="advance-search-bt" size="sm"
                 onClick={() => setOpen(!open)}
                 aria-controls="example-collapse-text"
                 aria-expanded={open}
@@ -80,6 +85,7 @@ const SearchBar = () => {
           <AdvanceSearch />
         </div>
       </Collapse>
+      </div>
     </>
   );
 };

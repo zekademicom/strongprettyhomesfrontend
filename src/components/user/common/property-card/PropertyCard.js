@@ -40,6 +40,7 @@ const PropertyCard = ({ property }) => {
             <span>{type}</span>
           </span>
 
+
           {/* <div class="bottom-features"> */}
           <div class="price">${price}</div>
           {/* <div class="like">
