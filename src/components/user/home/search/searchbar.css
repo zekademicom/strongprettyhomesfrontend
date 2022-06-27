@@ -10,7 +10,7 @@
     z-index:5;
     background-color: white;
     border-radius: 1rem;
-    padding: 1rem 1rem;
+    padding: 0.5rem 1rem;
     color: rgba(89, 80, 80, 0.801);
 }
 
@@ -42,4 +42,7 @@
 }
 span{
     font-size: large;
+}
+.bar{
+    position: fixed;
 }

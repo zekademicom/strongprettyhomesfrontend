@@ -9,27 +9,36 @@ import {
   ToggleButton,
   Collapse,
 } from "react-bootstrap";
-import "./searchbar.css";
+
 import { AiOutlineSearch } from "react-icons/ai";
 import { BsThreeDotsVertical } from "react-icons/bs";
 import AdvanceSearch from "./advance-search";
 import StatusBar from "./status-bar";
+import { useLocation } from "react-router-dom";
+import "./searchbar.css";
 
 const SearchBar = () => {
   const [open, setOpen] = useState(false);
+  const location = useLocation();
+
+  const currentPath = location.pathname;
+
+  console.log(currentPath);
+
 
   return (
     <>
-      <StatusBar />
-      <div className="transparent">
-        <div className="search-bar ">
+    <div className="bar ">
+      <div >
+        <StatusBar />
+        <div className="search-bar transparent">
           <Row className="search-form g-3">
-            <Col lg={2}>
+            <Col   className="lg-2">
               <Form.Group className="mb-3">
                 <Form.Control type="text" placeholder="Type something" />
               </Form.Group>
             </Col>
-            <Col lg={2}>
+            <Col className="lg-2">
               <Form.Group className="mb-2">
                 <Form.Select id="disabledSelect">
                   <option>Category</option>
@@ -39,19 +48,19 @@ const SearchBar = () => {
                 </Form.Select>
               </Form.Group>
             </Col>
-            <Col lg={2}>
+            <Col className="lg-2">
               <Form.Group className="mb-3">
                 <Form.Control type="text" placeholder="Min Price" />
               </Form.Group>
             </Col>
-            <Col lg={2}>
+            <Col className="lg-2">
               <Form.Group className="mb-3">
                 <Form.Control type="text" placeholder="Max Price" />
               </Form.Group>
             </Col>
-            <Col lg={2}>
+            <Col className="lg-2">
               <ToggleButton
-                className="advance-search-btn"
+                className="advance-search-bt" size="sm"
                 onClick={() => setOpen(!open)}
                 aria-controls="example-collapse-text"
                 aria-expanded={open}
@@ -60,7 +69,7 @@ const SearchBar = () => {
               </ToggleButton>
               <span>&nbsp;&nbsp; Advanced</span>
             </Col>
-            <Col lg={2}>
+            <Col className="lg-2">
               <Button className="btn btn-lg" variant="primary" type="button">
                 <AiOutlineSearch /> Search
               </Button>
@@ -73,6 +82,7 @@ const SearchBar = () => {
           <AdvanceSearch />
         </div>
       </Collapse>
+      </div>
     </>
   );
 };
