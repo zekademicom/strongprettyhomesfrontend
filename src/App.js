@@ -6,6 +6,7 @@ import { useStore } from "./store";
 import { setProperties } from "./store/property/propertyActions";
 import { getUser } from "./api/user-service";
 import { loginSuccess } from "./store/user/userActions";
+import LoadingPage from "./pages/users/LoadingPage";
 
 
 
@@ -36,7 +37,10 @@ const App=()=> {
   useEffect(() => {
     loadData();
   }, []);
-  
+  if(loading) 
+  return(<LoadingPage/>)
+
+  else
 
  
       
