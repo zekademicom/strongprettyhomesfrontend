@@ -17,6 +17,7 @@ import StatusBar from "./status-bar";
 import { useLocation } from "react-router-dom";
 import "./searchbar.css";
 
+
 const SearchBar = () => {
   const [open, setOpen] = useState(false);
   const location = useLocation();
@@ -28,8 +29,10 @@ const SearchBar = () => {
 
   return (
     <>
+
     <div className="bar ">
       <div >
+
         <StatusBar />
         <div className="search-bar transparent">
           <Row className="search-form g-3">

@@ -12,12 +12,14 @@
     border-radius: 1rem;
     padding: 0.5rem 1rem;
     color: rgba(89, 80, 80, 0.801);
+    
 }
 
 .transparent{
    
     border-radius: 1.5rem;
     border: 10px solid rgba(255, 255, 255, 0.204) ;
+    
 
 }
 
@@ -25,13 +27,12 @@
     /* padding: 0.5rem; */
     justify-content: center; 
     margin-top: 5px !important;
-   
 
 }
 
 .btn{
     background-color: var(--color1) !important;
-    padding: 0.5rem 2rem !important;
+    padding: 0.4rem 1rem !important;
     transform: translateY(-10%);
 }
 
