@@ -1,0 +1,16 @@
+.loading-page{
+    background-color: var(--color3);
+    width:100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.loading-page .spinner-border{
+    width:20rem;
+    height:20rem;
+    position: absolute;
+    color: var(--color1);
+
+}
