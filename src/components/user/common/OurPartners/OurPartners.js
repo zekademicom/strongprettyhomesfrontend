@@ -10,7 +10,7 @@ const OurPartners = () => {
         desc="We only work with the best companies around the globe"
       />
 
-      <div className="Partners">
+      <div className="partners">
         <img src="img/partners/partner-01.png" />
         <img src="img/partners/partner-02.png" />
         <img src="img/partners/partner-03.png" />
