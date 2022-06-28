@@ -4,6 +4,8 @@ import { getProperties } from "./api/property-service";
 import CustomRoutes from "./router/custom-routes";
 import { useStore } from "./store";
 import { setProperties } from "./store/property/propertyActions";
+import { getUser } from "./api/user-service";
+import { loginSuccess } from "./store/user/userActions";
 
 import "swiper/css/bundle";
 import { getUser } from "./api/user-service";
@@ -12,15 +14,23 @@ import { loginSuccess } from "./store/user/userActions";
 
 
 const App=()=> {
-  // const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(true);
+  const {dispatchUser,dispatchProperty} = useStore();
 
-  const {dispatchProperty,dispatchUser} = useStore();
 
   const loadData = async () =>  { 
     try {
      let resp= await getProperties();
      dispatchProperty(setProperties(resp.data))
       console.log(resp.data)
+
+      const token = localStorage.getItem("token");
+      if(token){
+        resp = await getUser();
+        dispatchUser(loginSuccess(resp.data));
+      }
+
+      setLoading(false);
       
       // const token=localStorage.getItem("token");
       // if(token){
@@ -37,6 +47,7 @@ const App=()=> {
       
     } catch (err) {
       console.log(err);
+      setLoading(false);
     }
   }
 
