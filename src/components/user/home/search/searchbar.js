@@ -18,7 +18,6 @@ import "./searchbar.css";
 import "./status-bar.css"
 import { getSearchProperties } from "../../../../api/property-service";
 import { setSearch } from "../../../../store/search/searchActions";
-import { type } from "@testing-library/user-event/dist/type";
 
 const SearchBar = () => {
   const [open, setOpen] = useState(false);
@@ -32,8 +31,8 @@ const SearchBar = () => {
   const initialValues = {
     type: "",
     category: "",
-    lowPrice: 0,
-    highPrice: 0,
+    minPrice: "",
+    maxPrice: "",
     bedrooms: "",
     bathrooms: "",
     location: "",
@@ -45,8 +44,8 @@ const SearchBar = () => {
   const validationSchema = Yup.object({
     type: Yup.string(),
     category: Yup.string(),
-    lowPrice: Yup.number(),
-    highPrice: Yup.number(),
+    minPrice: Yup.number().integer(),
+    maxPrice: Yup.number(),
     bedrooms: Yup.string(),
     bathrooms: Yup.string(),
     location: Yup.string(),
@@ -59,8 +58,8 @@ const SearchBar = () => {
     const {
       type,
       category,
-      lowPrice,
-      highPrice,
+      minPrice,
+      maxPrice,
       bedrooms,
       bathrooms,
       location,
@@ -138,12 +137,8 @@ const SearchBar = () => {
                 <Form.Control
                   type="number"
                   placeholder="Min Price"
-                //   onValueChange={(values) => {
-                //     values.preventDefault();
-                //     const {  value } = values;
-                //     formik.setFieldValue('minPrice', value);
-                // }}
-             {...formik.getFieldProps("minPrice")}
+  
+            {...formik.getFieldProps("minPrice")}
                 />
               </Form.Group>
             </Col>
