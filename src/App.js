@@ -8,15 +8,12 @@ import { getUser } from "./api/user-service";
 import { loginSuccess } from "./store/user/userActions";
 
 import "swiper/css/bundle";
-import { getUser } from "./api/user-service";
-import { loginSuccess } from "./store/user/userActions";
 
 
 
 const App=()=> {
   const [loading, setLoading] = useState(true);
   const {dispatchUser,dispatchProperty} = useStore();
-
 
   const loadData = async () =>  { 
     try {
@@ -32,19 +29,6 @@ const App=()=> {
 
       setLoading(false);
       
-      // const token=localStorage.getItem("token");
-      // if(token){
-
-      // // token i olmayan ya da ilk defa giren kullanici icin yetkisiz giris burada token bekliyor
-      // // hata veriyor err gidiyor ve getvehicle e gitmeden err gidiyor bundan dolayi araclar uste yerlestirildi
-      //  resp = await getUser();/**sencron yapiya geciyoruz awaite ile cevabi bekle sonra diger asamaya gec await icin async dememiz lazim */
-      // dispatchUser(loginSuccess(resp.data));
-      // }
-
-     
-      
-      // setLoading(false);//server a gidip cevap gelince false a cekiyoruz
-      
     } catch (err) {
       console.log(err);
       setLoading(false);
@@ -54,10 +38,9 @@ const App=()=> {
   useEffect(() => {
     loadData();
   }, []);
+  
 
-  // if(loading) 
-  //   // return(<LoadingPage/>)
-  // // else
+ 
       
   return (
 <>
