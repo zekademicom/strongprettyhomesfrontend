@@ -4,7 +4,7 @@ import { userReducer } from "./user/userReducer";
 import { propertyInitialState } from "./property/propertyInitialState";
 import { propertyReducer } from "./property/propertyReducer";
 import { searchReducer } from "./search/searchReducer";
-import { searchInitialState, SEARCHInitialState } from "./search/searchInitialState";
+import { searchInitialState } from "./search/searchInitialState";
 
 // merkezi statin tanimlandigi yer
 

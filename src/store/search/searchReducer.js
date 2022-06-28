@@ -6,7 +6,9 @@ export const searchReducer = (state = searchInitialState, action) => {
         return {
             ...state,
             search: action.payload
+            
         }
+        
     }
 
 }
