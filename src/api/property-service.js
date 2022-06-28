@@ -13,8 +13,8 @@ const getSearchProperties = (searchModel) => {
   const {
     type,
     category,
-    lowPrice,
-    highPrice,
+    minPrice,
+    maxPrice,
     bedrooms,
     bathrooms,
     location,
@@ -24,7 +24,7 @@ const getSearchProperties = (searchModel) => {
   } = searchModel;
 
   return axios.get(
-    `${API_URL}/property/search?type=${type}&category=${category}&lowPrice=${lowPrice}&highPrice=${highPrice}&bedrooms=${bedrooms}&bathrooms=${bathrooms}&location=${location}&country=${country}&city=${city}&district=${district}`
+    `${API_URL}/property/search?type=${type}&category=${category}&minPrice=${minPrice}&maxPrice=${maxPrice}&bedrooms=${bedrooms}&bathrooms=${bathrooms}&location=${location}&country=${country}&city=${city}&district=${district}`
   );
 };
 

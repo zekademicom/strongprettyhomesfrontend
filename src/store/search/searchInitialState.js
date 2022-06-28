@@ -1,3 +1,3 @@
 export const searchInitialState = {
-    search:[]
+    search:{}
 }
