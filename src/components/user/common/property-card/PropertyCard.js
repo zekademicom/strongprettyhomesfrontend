@@ -23,9 +23,11 @@ const PropertyCard = ({ property }) => {
     image
   } = property;
 
-  const navigate = useNavigate();
-  const imageSrc = `${process.env.REACT_APP_API_URL}/files/display/${image[0]}`;
+  //onsole.log(property.image) 
 
+  const navigate = useNavigate();
+  const imageSrc = `${process.env.REACT_APP_API_URL}/agentImg/display/${image[0]}`;
+ 
   return (
     <>
 
@@ -33,7 +35,9 @@ const PropertyCard = ({ property }) => {
         variant="top"
         className="property-card"
         onClick={() => navigate(`/properties/${id}`)}
+       
       >
+        
         <div className="image-container">
           <Card.Img variant="top" src={imageSrc} />
           <span className="type">
@@ -42,7 +46,7 @@ const PropertyCard = ({ property }) => {
 
 
           {/* <div class="bottom-features"> */}
-          <div class="price">${price}</div>
+          <div className="price">${price}</div>
           {/* <div class="like">
               {" "}
               <CgHeart />
