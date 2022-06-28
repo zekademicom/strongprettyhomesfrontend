@@ -15,7 +15,7 @@ const Slider = () => {
             style={{ backgroundImage: `url(${image})` }}
           >
             <Carousel.Caption>
-              <div className="d-none d-lg-block">
+              <div className="d-none d-lg-block titled">
                 <h3>{slide.title}</h3>
                 <p>{slide.desc}</p>
               </div>
