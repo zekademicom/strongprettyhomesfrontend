@@ -33,6 +33,7 @@ const SearchBar = () => {
     category: "",
     minPrice: "",
     maxPrice: "",
+
     bedrooms: "",
     bathrooms: "",
     location: "",
@@ -70,9 +71,7 @@ const SearchBar = () => {
     setLoading(true);
 
     try {
-      const response = await getSearchProperties(valuesSearch);
-      console.log(response.data);
-      dispatchSearch(setSearch(response.data));
+      dispatchSearch(setSearch(valuesSearch));
       setLoading(false);
     } catch (err) {
       console.log(err);
@@ -139,6 +138,7 @@ const SearchBar = () => {
                   placeholder="Min Price"
   
             {...formik.getFieldProps("minPrice")}
+
                 />
               </Form.Group>
             </Col>
@@ -147,7 +147,7 @@ const SearchBar = () => {
                 <Form.Control
                   type="number"
                   placeholder="Max Price"
-                  {...formik.getFieldProps("maxPrice")}
+                  {...formik.getFieldProps("highPrice")}
                 />
               </Form.Group>
             </Col>
