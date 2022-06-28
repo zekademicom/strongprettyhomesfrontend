@@ -2,12 +2,11 @@ import React, { useState } from "react";
 import {
   Form,
   Button,
-  Container,
   Row,
   Col,
-  InputGroup,
   ToggleButton,
   Collapse,
+  Spinner
 } from "react-bootstrap";
 import * as Yup from "yup";
 import { useFormik } from "formik";
@@ -19,6 +18,7 @@ import "./searchbar.css";
 import "./status-bar.css"
 import { getSearchProperties } from "../../../../api/property-service";
 import { setSearch } from "../../../../store/search/searchActions";
+import { type } from "@testing-library/user-event/dist/type";
 
 const SearchBar = () => {
   const [open, setOpen] = useState(false);
@@ -28,12 +28,12 @@ const SearchBar = () => {
   const navigate = useNavigate();
   const { dispatchSearch } = useStore();
   const [isActive, setIsActive] = useState(false);
-  const [type, setType] = useState("");
 
   const initialValues = {
+    type: "",
     category: "",
-    lowPrice: "",
-    highPrice: "",
+    lowPrice: 0,
+    highPrice: 0,
     bedrooms: "",
     bathrooms: "",
     location: "",
@@ -43,11 +43,12 @@ const SearchBar = () => {
   };
 
   const validationSchema = Yup.object({
-    category: Yup.string().required("Please enter a category"),
+    type: Yup.string(),
+    category: Yup.string(),
     lowPrice: Yup.number(),
     highPrice: Yup.number(),
-    bedrooms: Yup.number(),
-    bathrooms: Yup.number(),
+    bedrooms: Yup.string(),
+    bathrooms: Yup.string(),
     location: Yup.string(),
     country: Yup.string(),
     city: Yup.string(),
@@ -65,13 +66,13 @@ const SearchBar = () => {
       location,
       country,
       city,
-      district,
+      district
     } = valuesSearch;
     setLoading(true);
-    console.log(valuesSearch);
 
     try {
       const response = await getSearchProperties(valuesSearch);
+      console.log(response.data);
       dispatchSearch(setSearch(response.data));
       setLoading(false);
     } catch (err) {
@@ -87,11 +88,11 @@ const SearchBar = () => {
 
   const handleClick1 = (event) => {
     setIsActive(true);
-    setType("RENT");
+    formik.setFieldValue("type", "RENT")
   };
   const handleClick2 = (event) => {
     setIsActive(false);
-    setType("SALE");
+    formik.setFieldValue("type", "SALE")
   };
 
   return (
@@ -111,7 +112,7 @@ const SearchBar = () => {
             Sale
           </div>
         </div>
-
+    <Form className="search-form g-3" noValidate onSubmit={formik.handleSubmit}>
         <div className="search-bar transparent">
           <Row className="search-form g-3">
             <Col className="lg-2">
@@ -125,26 +126,31 @@ const SearchBar = () => {
                   id="disabledSelect"
                   {...formik.getFieldProps("category")}
                 >
-                  <option>Category</option>
+                  <option value="">Category</option>
                   <option value="VILLA">Villa</option>
-                  <option>House</option>
-                  <option>Land</option>
+                  <option value="HOUSE">House</option>
+                  <option value="LAND">Land</option>
                 </Form.Select>
               </Form.Group>
             </Col>
             <Col className="lg-2">
               <Form.Group className="mb-3">
                 <Form.Control
-                  type="text"
+                  type="number"
                   placeholder="Min Price"
-                  {...formik.getFieldProps("minPrice")}
+                //   onValueChange={(values) => {
+                //     values.preventDefault();
+                //     const {  value } = values;
+                //     formik.setFieldValue('minPrice', value);
+                // }}
+             {...formik.getFieldProps("minPrice")}
                 />
               </Form.Group>
             </Col>
             <Col className="lg-2">
               <Form.Group className="mb-3">
                 <Form.Control
-                  type="text"
+                  type="number"
                   placeholder="Max Price"
                   {...formik.getFieldProps("maxPrice")}
                 />
@@ -167,14 +173,16 @@ const SearchBar = () => {
                 className="btn btn-lg"
                 variant="primary"
                 type="submit"
-                onClick={() => onSubmit()}
+                onClick={() => navigate("/")}
               >
-                <AiOutlineSearch /> Search
+              {loading && <Spinner animation="border" size="sm" />}  <AiOutlineSearch /> Search
               </Button>
             </Col>
           </Row>
         </div>
+        </Form>
       </div>
+      
       <Collapse in={open}>
         <div id="example-collapse-text">
           <div className="transparent">
@@ -239,6 +247,7 @@ const SearchBar = () => {
           </div>
         </div>
       </Collapse>
+      
     </>
   );
 };

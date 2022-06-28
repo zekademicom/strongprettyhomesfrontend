@@ -42,7 +42,7 @@ const PropertyCard = ({ property }) => {
 
 
           {/* <div class="bottom-features"> */}
-          <div class="price">${price}</div>
+          <div className="price">${price}</div>
           {/* <div class="like">
               {" "}
               <CgHeart />

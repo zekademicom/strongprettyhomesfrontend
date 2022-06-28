@@ -10,12 +10,22 @@ const getProperty = (id) => {
 };
 
 const getSearchProperties = (searchModel) => {
-  const {status, category, lowPrice, highPrice,bedrooms, bathrooms, location, country, city, district }= searchModel;
- 
-  return axios.get(`${API_URL}/property/search?status=${status}&category=${category}&lowPrice=${lowPrice}&
-  highPrice=${highPrice}&bedrooms=${bedrooms}&bathrooms=${bathrooms}&location=${location}&country=${country}&
-  &city=${city}&district=${district}`);
+  const {
+    type,
+    category,
+    lowPrice,
+    highPrice,
+    bedrooms,
+    bathrooms,
+    location,
+    country,
+    city,
+    district,
+  } = searchModel;
 
-}
+  return axios.get(
+    `${API_URL}/property/search?type=${type}&category=${category}&lowPrice=${lowPrice}&highPrice=${highPrice}&bedrooms=${bedrooms}&bathrooms=${bathrooms}&location=${location}&country=${country}&city=${city}&district=${district}`
+  );
+};
 
 export { getProperties, getProperty, getSearchProperties };
