@@ -19,27 +19,30 @@ const PropertyCard = ({ property }) => {
     bedrooms,
     location,
     area,
-    image
+    image,
   } = property;
 
   const navigate = useNavigate();
+
   const imageSrc = `${process.env.REACT_APP_API_URL}/files/display/${image[0]}`;
+
 
   return (
     <>
-
       <Card
         variant="top"
         className="property-card"
         onClick={() => navigate(`/properties/${id}`)}
       >
         <div className="image-container">
+          {/* {image.map((imgId, index) => {
+            let temp = `${process.env.REACT_APP_API_URL}/files/display/${imgId}`;
+            return <Card.Img variant="top" key={index} src={temp} />;
+          })} */}
           <Card.Img variant="top" src={imageSrc} />
           <span className="type">
             <span>{type}</span>
           </span>
-
-
           {/* <div class="bottom-features"> */}
           <div className="price">${price}</div>
           {/* <div class="like">
@@ -50,20 +53,30 @@ const PropertyCard = ({ property }) => {
         </div>
 
         <Card.Body className="card-body ">
-
           <div className="card-items">
             <div className="title">{title}</div>
             <h2 className="desc">{description}</h2>
-            <div className="location"><MdLocationOn />
-              {location}</div>
+            <div className="location">
+              <MdLocationOn />
+              {location}
+            </div>
           </div>
           <div className="props">
-            <span> <RiHotelBedLine />
-              {bedrooms}  beds</span>
-            <span> <BiBath />
-              {bathrooms}  baths</span>
-            <span> <BsTextareaResize />
-              {area}  m²</span>
+            <span>
+              {" "}
+              <RiHotelBedLine />
+              {bedrooms} beds
+            </span>
+            <span>
+              {" "}
+              <BiBath />
+              {bathrooms} baths
+            </span>
+            <span>
+              {" "}
+              <BsTextareaResize />
+              {area} m²
+            </span>
           </div>
         </Card.Body>
       </Card>

@@ -6,7 +6,7 @@ import {
   Col,
   ToggleButton,
   Collapse,
-  Spinner
+  Spinner,
 } from "react-bootstrap";
 import * as Yup from "yup";
 import { useFormik } from "formik";
@@ -15,8 +15,7 @@ import { AiOutlineSearch } from "react-icons/ai";
 import { BsThreeDotsVertical } from "react-icons/bs";
 import { useLocation, useNavigate } from "react-router-dom";
 import "./searchbar.css";
-import "./status-bar.css"
-import { getSearchProperties } from "../../../../api/property-service";
+import "./status-bar.css";
 import { setSearch } from "../../../../store/search/searchActions";
 
 const SearchBar = () => {
@@ -33,10 +32,9 @@ const SearchBar = () => {
     category: "",
     minPrice: "",
     maxPrice: "",
-
     bedrooms: "",
     bathrooms: "",
-    location: "",
+    loca: "",
     country: "",
     city: "",
     district: "",
@@ -49,29 +47,31 @@ const SearchBar = () => {
     maxPrice: Yup.number(),
     bedrooms: Yup.string(),
     bathrooms: Yup.string(),
-    location: Yup.string(),
+    loca: Yup.string(),
     country: Yup.string(),
     city: Yup.string(),
     district: Yup.string(),
   });
 
-  const onSubmit = async (valuesSearch) => {
-    const {
-      type,
-      category,
-      minPrice,
-      maxPrice,
-      bedrooms,
-      bathrooms,
-      location,
-      country,
-      city,
-      district
-    } = valuesSearch;
+  const onSubmit = async (values) => {
+    // const {
+    //   category,
+    //   type,
+    //   minPrice,
+    //   maxPrice,
+    //   bedrooms,
+    //   bathrooms,
+    //   loca,
+    //   country,
+    //   city,
+    //   district
+    // } = valuesSearch || {};
+
     setLoading(true);
 
     try {
-      dispatchSearch(setSearch(valuesSearch));
+      console.log(setSearch(values));
+      dispatchSearch(setSearch(values));
       setLoading(false);
     } catch (err) {
       console.log(err);
@@ -84,13 +84,13 @@ const SearchBar = () => {
     onSubmit,
   });
 
-  const handleClick1 = (event) => {
+  const handleClick1 = () => {
     setIsActive(true);
-    formik.setFieldValue("type", "RENT")
+    formik.setFieldValue("type", "RENT");
   };
-  const handleClick2 = (event) => {
+  const handleClick2 = () => {
     setIsActive(false);
-    formik.setFieldValue("type", "SALE")
+    formik.setFieldValue("type", "SALE");
   };
 
   return (
@@ -110,74 +110,77 @@ const SearchBar = () => {
             Sale
           </div>
         </div>
-    <Form className="search-form g-3" noValidate onSubmit={formik.handleSubmit}>
-        <div className="search-bar transparent">
-          <Row className="search-form g-3">
-            <Col className="lg-2">
-              <Form.Group className="mb-3">
-                <Form.Control type="text" placeholder="Type something" />
-              </Form.Group>
-            </Col>
-            <Col className="lg-2">
-              <Form.Group className="mb-2">
-                <Form.Select
-                  id="disabledSelect"
-                  {...formik.getFieldProps("category")}
+        <Form
+          className="search-form g-3"
+          noValidate
+          onSubmit={formik.handleSubmit}
+        >
+          <div className="search-bar transparent">
+            <Row className="search-form g-3">
+              <Col className="lg-2">
+                <Form.Group className="mb-3">
+                  <Form.Control type="text" placeholder="Type something" />
+                </Form.Group>
+              </Col>
+              <Col className="lg-2">
+                <Form.Group className="mb-2">
+                  <Form.Select
+                    id="disabledSelect"
+                    {...formik.getFieldProps("category")}
+                  >
+                    <option value="">Category</option>
+                    <option value="VILLA">Villa</option>
+                    <option value="HOUSE">House</option>
+                    <option value="LAND">Land</option>
+                  </Form.Select>
+                </Form.Group>
+              </Col>
+              <Col className="lg-2">
+                <Form.Group className="mb-3">
+                  <Form.Control
+                    type="number"
+                    placeholder="Min Price"
+                    {...formik.getFieldProps("minPrice")}
+                  />
+                </Form.Group>
+              </Col>
+              <Col className="lg-2">
+                <Form.Group className="mb-3">
+                  <Form.Control
+                    type="number"
+                    placeholder="Max Price"
+                    {...formik.getFieldProps("maxPrice")}
+                  />
+                </Form.Group>
+              </Col>
+              <Col className="lg-2">
+                <ToggleButton
+                  className="advance-search-bt"
+                  size="sm"
+                  onClick={() => setOpen(!open)}
+                  aria-controls="example-collapse-text"
+                  aria-expanded={open}
                 >
-                  <option value="">Category</option>
-                  <option value="VILLA">Villa</option>
-                  <option value="HOUSE">House</option>
-                  <option value="LAND">Land</option>
-                </Form.Select>
-              </Form.Group>
-            </Col>
-            <Col className="lg-2">
-              <Form.Group className="mb-3">
-                <Form.Control
-                  type="number"
-                  placeholder="Min Price"
-  
-            {...formik.getFieldProps("minPrice")}
-
-                />
-              </Form.Group>
-            </Col>
-            <Col className="lg-2">
-              <Form.Group className="mb-3">
-                <Form.Control
-                  type="number"
-                  placeholder="Max Price"
-                  {...formik.getFieldProps("highPrice")}
-                />
-              </Form.Group>
-            </Col>
-            <Col className="lg-2">
-              <ToggleButton
-                className="advance-search-bt"
-                size="sm"
-                onClick={() => setOpen(!open)}
-                aria-controls="example-collapse-text"
-                aria-expanded={open}
-              >
-                <BsThreeDotsVertical />
-              </ToggleButton>
-              <span>&nbsp;&nbsp; Advanced</span>
-            </Col>
-            <Col className="lg-2">
-              <Button
-                className="btn btn-lg"
-                variant="primary"
-                type="submit"
-                onClick={() => navigate("/")}
-              >
-              {loading && <Spinner animation="border" size="sm" />}  <AiOutlineSearch /> Search
-              </Button>
-            </Col>
-          </Row>
-        </div>
+                  <BsThreeDotsVertical />
+                </ToggleButton>
+                <span>&nbsp;&nbsp; Advanced</span>
+              </Col>
+              <Col className="lg-2">
+                <Button
+                  className="btn btn-lg"
+                  variant="primary"
+                  type="submit"
+                  // onClick={() => onSubmit()}
+                >
+                  {loading && <Spinner animation="border" size="sm" />}{" "}
+                  <AiOutlineSearch /> Search
+                </Button>
+              </Col>
+            </Row>
+          </div>
         </Form>
       </div>
-      
+
       <Collapse in={open}>
         <div id="example-collapse-text">
           <div className="transparent">
@@ -206,7 +209,7 @@ const SearchBar = () => {
                     <Form.Control
                       type="text"
                       placeholder="Location"
-                      {...formik.getFieldProps("location")}
+                      {...formik.getFieldProps("loca")}
                     />
                   </Form.Group>
                 </Col>
@@ -242,7 +245,6 @@ const SearchBar = () => {
           </div>
         </div>
       </Collapse>
-      
     </>
   );
 };
