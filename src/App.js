@@ -11,14 +11,15 @@ import { setSearch } from "./store/search/searchActions";
 
 const App = () => {
   const [loading, setLoading] = useState(true);
-  const { dispatchUser, dispatchProperty } = useStore();
-  const { payload } = setSearch();
+  const { dispatchUser, dispatchProperty, searchState } = useStore();
+  const { initialSearchValues } = searchState;
+
 
   const loadData = async () => {
     try {
       let resp = await getProperties();
       dispatchProperty(setProperties(resp.data));
-      //   console.log(resp.data)
+     console.log(resp.data)
 
       const token = localStorage.getItem("token");
       if (token) {
@@ -35,10 +36,10 @@ const App = () => {
 
   const loadSearch = () => {
     try {
-      console.log(setSearch());
-      let resp = getSearchProperties(payload);
+      console.log(initialSearchValues);
+      let resp = getSearchProperties(initialSearchValues);
       console.log(resp.data);
-      dispatchProperty(setProperties(resp.data));
+      // dispatchProperty(setProperties(resp.data));
       
     } catch (error) {
       console.log(error);
