@@ -8,7 +8,7 @@ import "swiper/css/pagination";
 
 import { useStore } from "../../../../store";
 // import properties from "./property.json"
-// import "./popular-propert.css";
+import "./popular-property.css";
 
 
 const PopularProperties = () => {
@@ -19,32 +19,37 @@ const PopularProperties = () => {
   return (
     <>
     <section className="popular-property">
-    <Container>
-      <Row >
-      <Col > 
-        <Swiper
+    <Container className="">
+     
+   
+        <Swiper className="swiper-popular"
+
         breakpoints={{
-          640: {
+          100: {
+            slidesPerView: 1,
+          },
+          970: {
             slidesPerView: 2,
           },
-          768: {
+          1200: {
             slidesPerView: 3,
           },
+          
         }}
         modules={[Pagination]}
-        spaceBetween={-80}
-        // slidesPerView={3}
+        // spaceBetween={180}
+        slidesPerView={3}
         // pagination={{ clickable: true }}
         >
         {properties.map((property, index) => (
           
-          <SwiperSlide key={index} md={6} lg={4} >
-          <PropertyCard property={property} />
+          <SwiperSlide key={index} className="swipers">
+          <PropertyCard property={property}  />
           </SwiperSlide>
         ))}
         </Swiper>
-      </Col>
-      </Row>
+   
+  
     </Container>
     </section>
    </>

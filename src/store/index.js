@@ -3,6 +3,8 @@ import { userInitialState } from "./user/userInitialState";
 import { userReducer } from "./user/userReducer";
 import { propertyInitialState } from "./property/propertyInitialState";
 import { propertyReducer } from "./property/propertyReducer";
+import { searchReducer } from "./search/searchReducer";
+import { searchInitialState, SEARCHInitialState } from "./search/searchInitialState";
 
 // merkezi statin tanimlandigi yer
 
@@ -19,7 +21,9 @@ export const StoreProvider = ({ children }) => {
   // vehicle tanımlaması
   const [propertyState,dispatchProperty] = useReducer(propertyReducer,propertyInitialState);
 
-  const storeObject = { userState, dispatchUser , propertyState, dispatchProperty};
+  const [searchState,dispatchSearch] = useReducer(searchReducer, searchInitialState);
+
+  const storeObject = { userState, dispatchUser , propertyState, dispatchProperty, searchState, dispatchSearch};
 
   return <Store.Provider value={storeObject}>{children}</Store.Provider>;
 };
