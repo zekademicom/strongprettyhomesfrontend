@@ -1,5 +1,5 @@
 import React from "react";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import { getSearchProperties } from "../../../api/property-service";
 import { useStore } from "../../../store";
@@ -7,19 +7,21 @@ import PropertyCard from "../common/property-card/PropertyCard";
 import SearchBar from "../home/search/searchbar";
 import "./inside-search.css";
 
-const Properties = () => {
+const Properties = async() => {
   const { searchState } = useStore();
   const { initialSearchValues } = searchState;
+  const [catchValues, setCatchValues] = useState(initialSearchValues)
 
-  const { propertyState } = useStore();
-  const { properties } = propertyState;
+  // const { propertyState } = useStore();
+  // const { properties } = propertyState;
 
   console.log(initialSearchValues);
 
   let resp = [];
 
-  resp = getSearchProperties(initialSearchValues);
-  console.log(resp);
+  resp = await getSearchProperties(initialSearchValues);
+      console.log(resp);
+      setCatchValues(resp);
 
   //   let loadSearch = async () => {
 
@@ -32,7 +34,7 @@ const Properties = () => {
   //   };
 
   useEffect(() => {
-    // loadSearch();
+    
   }, [initialSearchValues]);
 
   return (
@@ -45,7 +47,7 @@ const Properties = () => {
         <div className="lg-9">
           <Container className="property-bar md-6 g-1 ">
             <Row>
-              {resp.map((property, index) => (
+              {catchValues.map((property, index) => (
                 <Col key={index} className="md-4 lg-4">
                   <PropertyCard property={property} />
                 </Col>
