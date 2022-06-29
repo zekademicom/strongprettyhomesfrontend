@@ -6,7 +6,7 @@ import HomePage from '../pages/users/HomePage'
 import AuthPage from '../pages/users/AuthPage'
 import PropertiesPage from '../pages/users/PropertiesPage'
 import UserTemplate from '../templates/user-template'
-import PropertyDetailPage from '../pages/users/propertyDetailPage'
+import PropertyDetailsPage from '../pages/users/PropertyDetailsPage'
 import ProtectedRoute from './protected-route'
 import UserReservationsPage from '../pages/users/UserReservationsPage'
 import UserReservationDetailsPage from '../pages/users/UserReservationDetailsPage'
@@ -29,7 +29,7 @@ const CustomRoutes = () => {
             <Route path="auth" element={<UserTemplate><AuthPage/></UserTemplate>}/>
             <Route path="properties"> 
          <Route index element={<UserTemplate><PropertiesPage/></UserTemplate>}/>
-         <Route path=":propertyId" element={<UserTemplate><PropertyDetailPage/></UserTemplate>}/>
+         <Route path=":propertyId" element={<UserTemplate><PropertyDetailsPage/></UserTemplate>}/>
          </Route>
 
          <Route path="user">
