@@ -8,4 +8,5 @@ export const searchReducer = (state = searchInitialState, action) => {
       initialSearchValues: action.payload,
     };
   }
+  return state;
 };
