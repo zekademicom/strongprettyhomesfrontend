@@ -17,9 +17,9 @@ const App = () => {
 
   const loadData = async () => {
     try {
+      console.log();
       let resp = await getProperties();
       dispatchProperty(setProperties(resp.data));
-     console.log(resp.data)
 
       const token = localStorage.getItem("token");
       if (token) {
@@ -34,23 +34,7 @@ const App = () => {
     }
   };
 
-  const loadSearch = () => {
-    try {
-      console.log(initialSearchValues);
-      let resp = getSearchProperties(initialSearchValues);
-      console.log(resp.data);
-      // dispatchProperty(setProperties(resp.data));
-      
-    } catch (error) {
-      console.log(error);
-    }
-  };
-
-  useEffect(() => {
-    console.log(setSearch());
-
-    loadSearch();
-  }, [setSearch()]);
+  
 
   useEffect(() => {
     loadData();

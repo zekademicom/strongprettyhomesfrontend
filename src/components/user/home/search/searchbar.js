@@ -27,11 +27,12 @@ const SearchBar = () => {
   const { dispatchSearch } = useStore();
   const [isActive, setIsActive] = useState(false);
 
+
   const initialValues = {
     type: "",
     category: "",
-    minPrice: "",
-    maxPrice: "",
+    lowPrice: "",
+    highPrice: "",
     bedrooms: "",
     bathrooms: "",
     loca: "",
@@ -43,8 +44,8 @@ const SearchBar = () => {
   const validationSchema = Yup.object({
     type: Yup.string(),
     category: Yup.string(),
-    minPrice: Yup.number().integer(),
-    maxPrice: Yup.number(),
+    lowPrice: Yup.number().integer(),
+    highPrice: Yup.number(),
     bedrooms: Yup.string(),
     bathrooms: Yup.string(),
     loca: Yup.string(),
@@ -70,8 +71,9 @@ const SearchBar = () => {
     setLoading(true);
 
     try {
-      console.log(setSearch(values));
+    //  console.log(setSearch(values));
       dispatchSearch(setSearch(values));
+      navigate("/properties")
       setLoading(false);
     } catch (err) {
       console.log(err);
@@ -140,7 +142,7 @@ const SearchBar = () => {
                   <Form.Control
                     type="number"
                     placeholder="Min Price"
-                    {...formik.getFieldProps("minPrice")}
+                    {...formik.getFieldProps("lowPrice")}
                   />
                 </Form.Group>
               </Col>
@@ -149,7 +151,7 @@ const SearchBar = () => {
                   <Form.Control
                     type="number"
                     placeholder="Max Price"
-                    {...formik.getFieldProps("maxPrice")}
+                    {...formik.getFieldProps("highPrice")}
                   />
                 </Form.Group>
               </Col>
