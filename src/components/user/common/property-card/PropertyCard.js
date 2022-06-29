@@ -21,7 +21,6 @@ const PropertyCard = ({ property }) => {
     location,
     area,
     image,
-    currentPath,
   } = property;
   // let imagesrc = require(`../../../../assets/img/properties/${image}`);
   const navigate = useNavigate();
