@@ -39,18 +39,22 @@ const App = () => {
       let resp = getSearchProperties(payload);
       console.log(resp.data);
       dispatchProperty(setProperties(resp.data));
+      
     } catch (error) {
       console.log(error);
     }
   };
 
   useEffect(() => {
+    console.log(setSearch());
+
+    loadSearch();
+  }, [setSearch()]);
+
+  useEffect(() => {
     loadData();
   }, []);
 
-  useEffect(() => {
-    loadSearch();
-  }, [setSearch()]);
 
   return (
     <>
