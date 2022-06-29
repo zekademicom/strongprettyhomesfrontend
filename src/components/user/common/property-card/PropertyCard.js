@@ -19,7 +19,7 @@ const PropertyCard = ({ property }) => {
     bedrooms,
     location,
     area,
-    image,
+    image
   } = property;
 
   const navigate = useNavigate();
