@@ -29,7 +29,7 @@ const CustomRoutes = () => {
             <Route path="auth" element={<UserTemplate><AuthPage/></UserTemplate>}/>
             <Route path="properties"> 
          <Route index element={<UserTemplate><PropertiesPage/></UserTemplate>}/>
-         <Route path=":propertiesId" element={<UserTemplate><PropertyDetailPage/></UserTemplate>}/>
+         <Route path=":propertyId" element={<UserTemplate><PropertyDetailPage/></UserTemplate>}/>
          </Route>
 
          <Route path="user">
