@@ -23,9 +23,11 @@ export const StoreProvider = ({ children }) => {
 
   const [searchState,dispatchSearch] = useReducer(searchReducer, searchInitialState);
 
+
   const storeObject = { userState, dispatchUser , propertyState, dispatchProperty, searchState, dispatchSearch};
 
   return <Store.Provider value={storeObject}>{children}</Store.Provider>;
+
 };
 
 // comtext api bir parcasi context api 2 sekilde kurulur biri simple birisi de advance yontem.state complexs yapiya sahip degilse ve cok fazla state yoksa simple tercih edilir

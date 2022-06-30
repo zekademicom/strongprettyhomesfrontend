@@ -1,6 +1,6 @@
 import React from "react";
 import SectionHeader from "../../home/section-header/section-header";
-import "./ourpartners.css";
+import "./ourPartners.css";
 
 const OurPartners = () => {
   return (

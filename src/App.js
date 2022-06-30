@@ -7,7 +7,9 @@ import { setProperties } from "./store/property/propertyActions";
 import { getUser } from "./api/user-service";
 import { loginSuccess } from "./store/user/userActions";
 import { searchReducer } from "./store/search/searchReducer";
+import LoadingPage from "./pages/users/LoadingPage";
 import { setSearch } from "./store/search/searchActions";
+
 
 const App = () => {
   const [loading, setLoading] = useState(true);
@@ -36,10 +38,29 @@ const App = () => {
 
   
 
+  const loadSearch = async () => {
+
+    try {
+
+      let response = await getSearchProperties(searchReducer);
+      console.log(response);
+    } catch (error) {
+      console.log(error);
+    }
+    
+  }
+
   useEffect(() => {
     loadData();
   }, []);
 
+  
+  useEffect(() => {
+   loadSearch()
+  }, [searchReducer])
+  
+  if(loading) 
+  return(<LoadingPage/>)  
 
   return (
     <>
@@ -47,6 +68,7 @@ const App = () => {
       <ToastContainer />
     </>
   );
-};
-
+}
 export default App;
+
+
