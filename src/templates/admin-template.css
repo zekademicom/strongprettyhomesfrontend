@@ -1,0 +1,41 @@
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+.p-5{
+    padding: 3rem !important;
+}
+
+
+@media(max-width: 992px){
+    .admin-template .sidebar{
+        height: auto;
+        flex: 0 0 auto;
+        width: 25%;
+    }}
+
+    @media (min-width: 992px){
+.navbar-expand-lg .navbar-collapse {
+    display: flex!important;
+    flex-basis: auto;
+}}
+
+.row>* {
+    flex-shrink: 0;
+    width: 100%;
+    max-width: 100%;
+    padding-right: calc(var(--bs-gutter-x) * .5);
+    padding-left: calc(var(--bs-gutter-x) * .5);
+    margin-top: var(--bs-gutter-y);
+}
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+div {
+    display: block;
+}
+.row {
+    --bs-gutter-x: 1.5rem;
+    --bs-gutter-y: 0;
+}
