@@ -1,4 +1,29 @@
+.admin-template .sidebar{
+    background-color: var(--color2);
+    height: 100vh;
+}
 
+@media(max-width: 991px){
+    .admin-template .sidebar{
+        height: auto;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
 .img-fluid {
     max-width: 100%;
     height: auto;
@@ -38,4 +63,4 @@ div {
 .row {
     --bs-gutter-x: 1.5rem;
     --bs-gutter-y: 0;
-}
+} */
