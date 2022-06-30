@@ -31,6 +31,7 @@ const CustomRoutes = () => {
          <Route index element={<UserTemplate><PropertiesPage/></UserTemplate>}/>
          <Route path=":propertyId" element={<UserTemplate><PropertyDetailsPage/></UserTemplate>}/>
          <Route path=":agentId" element={<UserTemplate><PropertyDetailsPage/></UserTemplate>}/>
+
          </Route>
 
          <Route path="user">

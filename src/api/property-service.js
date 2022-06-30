@@ -9,7 +9,7 @@ const getProperty = (id) => {
   return axios.get(`${API_URL}/property/visitors/${id}`);
 };
 
-const getSearchProperties = (searchModel) => {
+const getSearchProperties = (values) => {
   const {
     type,
     category,
@@ -17,14 +17,14 @@ const getSearchProperties = (searchModel) => {
     highPrice,
     bedrooms,
     bathrooms,
-    location,
+    loca,
     country,
     city,
     district,
-  } = searchModel;
+  } = values;
 
   return axios.get(
-    `${API_URL}/property/search?type=${type}&category=${category}&lowPrice=${lowPrice}&highPrice=${highPrice}&bedrooms=${bedrooms}&bathrooms=${bathrooms}&location=${location}&country=${country}&city=${city}&district=${district}`
+    `${API_URL}/property/search?type=${type}&category=${category}&lowPrice=${lowPrice}&highPrice=${highPrice}&bedrooms=${bedrooms}&bathrooms=${bathrooms}&location=${loca}&country=${country}&city=${city}&district=${district}`
   );
 };
 
