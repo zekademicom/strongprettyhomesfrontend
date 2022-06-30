@@ -1,41 +1,74 @@
-.property-details div[class^="col"]:first-child{
-   
-    position: relative;
+
+
+.table-main-property .table tr:nth-child(odd){
+    background-color: rgba(0, 0, 0, 0.080);
+    
 }
 
-.property-details .price{
-    background-color: var(--color1);
-    padding: 0.5rem 1rem;
-    border-radius: 5rem;
-    font-size: 1.5rem;
-    font-weight: 600;
+
+.table-main-property .table td:nth-child(odd):hover{
+   background-color:var(--color1);
+   color: white;
+ 
+}
+
+.table-main-property .table td:nth-child(even):hover{
+    background-color:var(--color1);
     color: white;
-    position: absolute;
-    top:0;
-    left: 50%;
-    transform: translateX(-50%);
-    box-shadow: 1px 1px 7px gray;
-    display: flex;
-    align-items: center;
-    gap:0.3rem
+  
+ }
+ .table-main-property .table td:nth-child(1){
+
+  padding-left: 1rem !important;
+  width: 50%;
+}
+.table-main-property .table td:nth-child(2){
+    padding-left: 1rem !important;
+    width: 50%;
+  }
+  
+
+
+.table-main-property svg{
+    font-size: 1.5rem;
+    margin-right: 0.4rem;
 }
 
-.property-details .price span{
-    font-size: 0.8rem;
-    font-weight: 400;
+.table-main-property td{
+    font-size: 1rem;    
+    padding:0.8rem 0rem !important;
 }
-
-.property-details ul{
-    list-style: none;
-    margin:0;
+.titles{
+    background-color:rgb(190, 187, 187);
+    color:black;
+    border-radius: 2rem 0;
+    margin: 0;
     padding: 0;
-    font-size: 1.2rem;
 }
 
-.property-details ul li{
-    line-height: 2rem;
+
+
+.titles .desc{
+    font-size:3rem;
+    text-align: center;
+    font-weight: 900;
+    margin-bottom: 1rem;
 }
 
-.vehicle-details ul li svg{
-   color: var(--color1);
+.table-main-property .table span{
+    font-size:1rem;
+    font-weight: 700;
+}
+
+.details{
+    margin-bottom: 3rem;
+    margin-right: 0.7rem;
+}
+.features .back svg{
+    font-size:2rem;
+    font-weight:600;
+  
+}
+.features .back{
+    cursor: pointer;
 }
