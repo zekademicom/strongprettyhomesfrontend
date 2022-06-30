@@ -1,4 +1,3 @@
-
 import React from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import ContactPage from '../pages/users/ContactPage'
@@ -54,15 +53,19 @@ const CustomRoutes = () => {
 
 
 
-            {/* USER ROUTES */}
+         {/* USER ROUTES */}
             <Route index element={<UserTemplate><HomePage/></UserTemplate>}/>
             <Route path="about" element={<UserTemplate><AboutPage/></UserTemplate>}/>
             <Route path="contact" element={<UserTemplate><ContactPage/></UserTemplate>}/>
             <Route path="auth" element={<UserTemplate><AuthPage/></UserTemplate>}/>
-            
+
+
             <Route path="properties"> 
          <Route index element={<UserTemplate><PropertiesPage/></UserTemplate>}/>
          <Route path=":propertyId" element={<UserTemplate><PropertyDetailsPage/></UserTemplate>}/>
+         <Route path=":agentId" element={<UserTemplate><PropertyDetailsPage/></UserTemplate>}/>
+
+
          </Route>
 
          <Route path="user">
