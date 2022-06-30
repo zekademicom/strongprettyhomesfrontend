@@ -6,7 +6,7 @@ import "react-toastify/dist/ReactToastify.min.css";
 import "alertifyjs/build/css/alertify.min.css";
 import "./assets/css/style.css";
 
-import "react-image-gallery/styles/css/image-gallery.css";
+// import "react-image-gallery/styles/css/image-gallery.css";
 
 // eslint-disable-next-line
 import "swiper/css/bundle";
