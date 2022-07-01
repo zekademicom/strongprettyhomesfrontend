@@ -3,13 +3,13 @@ import authHeader from "./auth-header";
 
 const API_URL = process.env.REACT_APP_API_URL;
 
-const isHomeAvailable = (dto) => {
-  const { propertyId, tourRequestTime } = dto;
-  return axios.get(
-    `${API_URL}/tour/add?propertyId=${propertyId}&tourRequestTime=${tourRequestTime}`,
-    { headers: authHeader() }
-  );
-};
+// const isHomeAvailable = (dto) => {
+//   const { propertyId, tourRequestTime } = dto;
+//   return axios.get(
+//     `${API_URL}/tour/add?propertyId=${propertyId}&tourRequestTime=${tourRequestTime}`,
+//     { headers: authHeader() ,}
+//   );
+// };
 
 const makeTourRequest = (tour) => {
     const { propertyId } = tour;
@@ -19,4 +19,4 @@ const makeTourRequest = (tour) => {
       headers: authHeader(),
     });
   };
-  export {makeTourRequest, isHomeAvailable};
+  export {makeTourRequest};

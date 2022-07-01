@@ -13,18 +13,16 @@ import {
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import moment from "moment";
-import {
-    makeTourRequest,
-  isHomeAvailable,
-} from "../../../api/tourRequest-service";
+import {makeTourRequest} from "../../../api/tourRequest-service";
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
 import SectionHeader from "../home/section-header/section-header"
 import { useStore } from "../../../store";
 
 const TourRequestForm = (tourRequest) => {
-  const {  userState } = useStore();
+  const {  requestState,userState } = useStore();
   const { isUserLogin } = userState;
+  const {tourRequests} = requestState;
 
     const [loading, setLoading] = useState(false);
   const [isPropertyAvailable, setIsPropertyAvailable] = useState(false);
@@ -83,7 +81,7 @@ const TourRequestForm = (tourRequest) => {
 
     if (!tourRequestTime) return;
     try {
-    
+    const available=tourRequests.filter((request)=>(request.tourRequestTime===tourRequestTime))
         const dto = {
             propertyId: tourRequest.id,
             tourRequestTime: tourRequestTime,
@@ -188,15 +186,9 @@ const TourRequestForm = (tourRequest) => {
                 variant="primary"
                 size="lg"
                 type="submit"
-                onClick={ isUserLogin ? (checkTheHomeIsAvailable):(<Container>
-                  <Alert variant="warning">
-                    <h4 className="text-center">
-                      Please log in to system to check the availability of the property and
-                      make tour request.
-                    </h4>
-                  </Alert>
-                </Container>)}
-                className={"button-send"}
+                onClick={checkTheHomeIsAvailable}
+               
+                className={"main" }
                 disabled={loading}
               >
                 {loading && <Spinner animation="border" size="sm" />} Send
