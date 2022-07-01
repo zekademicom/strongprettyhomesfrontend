@@ -23,7 +23,8 @@ const PropertyCard = ({ property }) => {
 
   const navigate = useNavigate();
 
- const imageSrc = `${process.env.REACT_APP_API_URL}/files/display/${image}`;
+ const imageSrc = `${process.env.REACT_APP_API_URL}/files/display/${image[0]}`;
+// console.log(imageSrc[0].id);
 
   return (
     <>

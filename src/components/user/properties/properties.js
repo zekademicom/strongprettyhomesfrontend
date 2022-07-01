@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React from "react";
 import { useEffect, useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
@@ -15,11 +14,11 @@ const Properties = () => {
   const { properties } = propertyState;
   const [catchValues, setCatchValues] = useState([]);
 
+  // console.log(initialSearchValues);
 
   const search = async () => {
-   let resp = await getSearchProperties(initialSearchValues);
+    let resp = await getSearchProperties(initialSearchValues);
     setCatchValues(resp.data);
-    
   };
 
   //   let loadSearch = async () => {
@@ -35,6 +34,8 @@ const Properties = () => {
   useEffect(() => {
     search();
   }, [initialSearchValues]);
+
+  console.log(catchValues);
 
   return (
     <>
@@ -58,13 +59,11 @@ const Properties = () => {
 						</Col>
 					))}
               */}
-			
-		</Row>
-		</Container>
-	</div>
-	</div>
-	</>
-	);};
-  export default Properties;
-
-
+            </Row>
+          </Container>
+        </div>
+      </div>
+    </>
+  );
+};
+export default Properties;
