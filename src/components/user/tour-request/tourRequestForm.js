@@ -89,17 +89,17 @@ const TourRequestForm = (tourRequest) => {
 
       setLoading(true);
 
-      const resp = await isHomeAvailable(dto);
-      const { isAvailable} = resp.data;
-      console.log(resp.data)
+      // const resp = await isHomeAvailable(dto);
+      // const { isAvailable} = resp.data;
+      // console.log(resp.data)
 
-      setIsPropertyAvailable(isAvailable);
+      // setIsPropertyAvailable(isAvailable);
 
-      if (!isAvailable) {
-        toast(
-          "The property you selected is not available in this hour. Please select another one"
-        );
-      }
+      // if (!isAvailable) {
+      //   toast(
+      //     "The property you selected is not available in this hour. Please select another one"
+      //   );
+      // }
     } catch (err) {
       toast(err || err.response.data.message);
     } finally {
