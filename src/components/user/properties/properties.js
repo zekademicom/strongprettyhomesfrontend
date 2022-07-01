@@ -21,16 +21,6 @@ const Properties = () => {
     setCatchValues(resp.data);
   };
 
-  //   let loadSearch = async () => {
-
-  //     try {
-  // 		console.log(await getSearchProperties(initialSearchValues));
-  //    return await getSearchProperties(initialSearchValues);
-  //     } catch (error) {
-  //       console.log(error);
-  //     }
-  //   };
-
   useEffect(() => {
     search();
   }, [initialSearchValues]);
@@ -53,12 +43,6 @@ const Properties = () => {
                 </Col>
               ))}
 
-              {/* {properties.map((property, index) => (
-						<Col key={index} className="md-4 lg-4">
-						  <PropertyCard property={property} />						
-						</Col>
-					))}
-              */}
             </Row>
           </Container>
         </div>
