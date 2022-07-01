@@ -23,10 +23,11 @@ const PropertyCard = ({ property }) => {
     image
   } = property;
 
-  //onsole.log(property.image) 
+  console.log(property.image) 
 
   const navigate = useNavigate();
-  const imageSrc = `${process.env.REACT_APP_API_URL}/agentImg/display/${image[0]}`;
+  const imageSrc = `${process.env.REACT_APP_API_URL}/files/display/${image[0]}`;
+  console.log(imageSrc);
  
   return (
     <>

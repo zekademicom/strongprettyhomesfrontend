@@ -4,6 +4,7 @@ import App from "./App";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "react-toastify/dist/ReactToastify.min.css";
 import "alertifyjs/build/css/alertify.min.css";
+import "swiper/css/bundle";
 import "./assets/css/style.css";
 import { StoreProvider } from "./store";
 

@@ -1,49 +1,89 @@
 import React from 'react'
-import {Container,Row,Col} from 'react-bootstrap'
+import { Col, Container, Row } from "react-bootstrap";
 
-const PropertyDetails = ({property}) => {
+import { BsTextareaResize } from "react-icons/bs";
+import { GiHomeGarage } from "react-icons/gi";
+import { MdLocationOn } from "react-icons/md";
+import { RiArrowGoBackLine } from "react-icons/ri"; 
+import { MdOutlineBedroomParent } from "react-icons/md";
+import { BiBath } from "react-icons/bi";
+import { FaCity } from "react-icons/fa";
+import { Table } from "react-bootstrap";
+import "./property-details.css"
+import PropertyAgent from './property-agent';
+import { useNavigate } from 'react-router-dom';
 
-  const {id,type, price,bedrooms,bathrooms,category,district,city,country,description,location,area,image} = property;
 
-  const imageSrc = `${process.env.REACT_APP_API_URL}/agentImg/display/${image[0]}`;
+
+// arabaya tiklayinca arabanin detayi hem popularcars d hem araba sayfasinda arabaya tiklayinca detay gelsin diyorsak bunu component vehicle-card da yapmaliyiz
+const PropertyDetails = ({ property }) => {
+  const navigate = useNavigate();
+
+  const {
+    id, title, description, category, type, bedrooms, bathrooms, garages, area, price, location, address, country, city, district, createDate, status
+  } = property;
+
+  console.log(property);
+
+
 
   return (
-      <Container className="property-details">
-      <Row className="align-items-center">
-        <Col md={6}>
-          <img src={imageSrc} className="img-fluid" alt={description} />
-          <div className="price">
-            ${price} <span> per hour</span>
-          </div>
-        </Col>
-        <Col md={6}>
-          <ul>
-            <li>
-               {country}
-            </li>
-          
-                {city}
-         
-            <li>
-              {type} 
-            </li>
-            <li>
-               {category} 
-            </li>
-            <li>
-              {bedrooms} bedrooms  
-            </li>
-            <li>
-           {bathrooms} bathrooms
-            </li>
-            <li>
-              {area} m<sup>2</sup>
-            </li>
-          </ul>
-        </Col>
-      </Row>
-    </Container>
-  )
-}
+    <>
 
-export default PropertyDetails
+      <div className="Container mt-3 details">
+        <div className="table-main-property">
+          <div className="titles">
+
+           
+            <div className="col-xs-12 desc">   {description}</div>
+
+          </div>
+          <div className="features">
+            <Table >
+
+              <tbody>
+                <tr>
+                  <td> Price&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;      : <span>${price} </span></td>
+                  <td > <BsTextareaResize />Area&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : <span>{area} m2</span> </td>
+
+                </tr>
+                <tr>
+                  <td> Category&nbsp;&nbsp;   : <span>{category}</span> </td>
+                  <td>  <MdOutlineBedroomParent /> Bedrooms &nbsp;: <span>{bedrooms} beds</span></td>
+
+                </tr>
+                <tr>
+                  <td>Status &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;   : <span className="status"> {status}</span></td>
+                  <td> <BiBath /> Bathrooms :<span> {bathrooms} baths</span></td>
+                </tr>
+                <tr>
+                  <td>  Type &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;     : <span>{type}</span></td>
+                  <td >  <FaCity /> City&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   : <span>{city}</span></td>
+                </tr>
+                <tr>
+                  <td>    District&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   :  <span>{district}</span></td>
+                  <td>  <GiHomeGarage /> Garages&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: <span>{garages} </span></td>
+                </tr>
+                <tr>
+                  <td >    Country&nbsp;&nbsp;&nbsp; &nbsp;: <span> {country} </span></td>
+                  <td>  <MdLocationOn /> Location &nbsp;&nbsp;&nbsp;&nbsp;: <span>{location} </span></td>
+
+                </tr>
+                <tr>
+                  <td >  Address &nbsp;&nbsp;&nbsp;: <span>{address}</span></td>
+                  <td className="back">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<RiArrowGoBackLine  onClick={() => navigate(-1)}/> </td>
+
+                </tr>
+              </tbody>
+            </Table>
+          </div>
+        </div>
+       
+      </div>
+
+
+    </>
+  );
+};
+
+export default PropertyDetails;
