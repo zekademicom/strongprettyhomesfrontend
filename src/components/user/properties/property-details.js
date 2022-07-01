@@ -1,4 +1,5 @@
 import React from 'react'
+import { Col, Container, Row } from "react-bootstrap";
 import { BsTextareaResize } from "react-icons/bs";
 import { GiHomeGarage } from "react-icons/gi";
 import { MdLocationOn } from "react-icons/md";
@@ -8,7 +9,12 @@ import { BiBath } from "react-icons/bi";
 import { FaCity } from "react-icons/fa";
 import { Table } from "react-bootstrap";
 import "./property-details.css"
+import PropertyAgent from './property-agent';
 import { useNavigate } from 'react-router-dom';
+
+
+
+// arabaya tiklayinca arabanin detayi hem popularcars d hem araba sayfasinda arabaya tiklayinca detay gelsin diyorsak bunu component vehicle-card da yapmaliyiz
 
 const PropertyDetails = ({ property }) => {
   const navigate = useNavigate();

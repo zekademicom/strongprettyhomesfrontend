@@ -1,5 +1,5 @@
 
-.OurPartners{
+.ourpartners{
         text-align: center;
         padding: 2rem;
         display:block;
@@ -13,7 +13,7 @@
         font-family:  Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
         
 } */
-.OurPartners h1::before{
+.ourpartners h1::before{
         content:"";
         position: absolute ;
         left: 37%;
@@ -27,7 +27,7 @@
         background-color: var(--color1);
         
     }
-    .Partners{
+    .partners{
         padding: 2rem;
         display: flex;
         gap: 10rem;

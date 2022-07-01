@@ -21,10 +21,12 @@ const PropertyCard = ({ property }) => {
     image
   } = property;
 
+  console.log(property.image) 
+
   const navigate = useNavigate();
 
   const imageSrc = `${process.env.REACT_APP_API_URL}/files/display/${image[0]}`;
-
+  console.log(imageSrc);
 
   return (
     <>
@@ -32,7 +34,9 @@ const PropertyCard = ({ property }) => {
         variant="top"
         className="property-card"
         onClick={() => navigate(`/properties/${id}`)}
+       
       >
+        
         <div className="image-container">
           {/* {image.map((imgId, index) => {
             let temp = `${process.env.REACT_APP_API_URL}/files/display/${imgId}`;

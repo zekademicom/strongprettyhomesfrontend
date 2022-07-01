@@ -8,10 +8,14 @@ const AdminTemplate = ({ children }) => {
   
     <Container fluid className="admin-template">
       <Row>
+        <Col>
         <div className="col-lg-3 sidebar">
           <SideBar />
         </div>
+        </Col>
+        <Col>
         <div  className="col-lg-9 p-5 ">{children}</div>
+        </Col>
       </Row>
     </Container>
   );

@@ -13,6 +13,7 @@ import UnAuthorizedPage from '../pages/common/UnAuthorizedPage'
 import NotFoundPage from '../pages/common/NotFoundPage'
 import AboutPage from '../pages/users/AboutPage'
 import ProfilePage from '../pages/users/ProfilePage'
+
 import AdminDashboardPage from '../pages/admins/AdminDashboardPage'
 import AdminUsersPage from '../pages/admins/AdminUsersPage'
 import AdminUsersEditPage from '../pages/admins/AdminUsersEditPage'
@@ -23,6 +24,7 @@ import AdminReservationsPage from '../pages/admins/AdminReservationsPage'
 import AdminReservationEditPage from '../pages/admins/AdminReservationEditPage'
 import AdminTemplate from '../templates/admin-template'
 import AdminPropertiesEditPage from '../pages/admins/AdminPropertiesEditPage'
+
 
 const CustomRoutes = () => {
   return (
@@ -63,6 +65,7 @@ const CustomRoutes = () => {
             <Route path="properties"> 
          <Route index element={<UserTemplate><PropertiesPage/></UserTemplate>}/>
          <Route path=":propertyId" element={<UserTemplate><PropertyDetailsPage/></UserTemplate>}/>
+
          <Route path=":agentId" element={<UserTemplate><PropertyDetailsPage/></UserTemplate>}/>
 
 

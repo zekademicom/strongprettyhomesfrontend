@@ -11,6 +11,7 @@ import LoadingPage from "./pages/users/LoadingPage";
 import { setSearch } from "./store/search/searchActions";
 
 
+
 const App = () => {
   const [loading, setLoading] = useState(true);
   const { dispatchUser, dispatchProperty, searchState } = useStore();
@@ -54,6 +55,7 @@ const App = () => {
     loadData();
   }, []);
 
+
   
   useEffect(() => {
    loadSearch()
@@ -61,6 +63,7 @@ const App = () => {
   
   if(loading) 
   return(<LoadingPage/>)  
+
 
   return (
     <>

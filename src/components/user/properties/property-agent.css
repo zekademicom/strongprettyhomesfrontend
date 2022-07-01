@@ -1,0 +1,104 @@
+.main-card{
+ width:30rem;
+
+}
+.main-card .agent-card{
+    background-color:var(--color1);
+ 
+}
+.image-container{
+ position:relative;
+ padding:1rem;
+ justify-content: center;
+ text-align:center;
+}
+.agent-card .image-container img {
+	border-radius: 0.8rem;
+    height:18rem;
+    width:18rem;
+	margin-top: 1rem ;
+}
+.agent-card {
+	position: relative;
+	border-radius: 0.8rem !important;
+	border: 0.5px solid rgb(236, 229, 229);
+	margin: 1rem;
+   height: 30rem;
+    cursor: pointer;
+}
+
+.card-body .name-lastName {
+	/* padding: 0.2rem 1.1rem; */
+	color: white;
+    display: flex;
+	/* justify-content: space-between; */
+text-align: center;
+justify-content:center;
+    font-size:1.5rem;
+    gap:1rem;
+    background-color: var(--color2);
+}
+.agent-card .email {
+	left: 30px;
+
+	bottom: 1.5rem;
+	color: white;
+	font-size: 1.3rem;
+	font-weight: 600;
+}
+
+.property-card .card-body {
+	text-align: center;
+}
+
+
+
+.property-card .card-body name {
+	color: #2e2e2e;
+	font-weight: 700;
+	margin: 0;
+	padding: 0;
+	line-height: 1.2;
+    font-size: 2rem;
+}
+
+.property-agent .card-body .lastName {
+	color: var(--color1);
+	font-size: 3rem;
+}
+
+.property-agent .card-body {
+	display: flex;
+	flex-direction: column;
+	gap: .7rem;
+	padding: 1rem 0;
+}
+.name-lastName span{
+	font-size:2rem;
+	font-weight: 600;
+	color:white;
+}
+.name-lastName {
+
+	background-color:rgba(255, 255, 255, 0.39)!important;
+
+}
+.telephone {
+	text-align: center;
+	font-size:1.5rem;
+
+}
+
+.telephone a{
+	font-size:1.5rem;
+	font-weight:600;
+	text-align: center;
+	color:black;
+}
+
+
+.email{
+	text-align: center;
+	font-size:1.2rem;
+
+}
