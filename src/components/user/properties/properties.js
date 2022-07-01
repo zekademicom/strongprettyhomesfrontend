@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from "react";
 import { useEffect, useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
@@ -53,16 +54,17 @@ const Properties = () => {
 
               {/* {properties.map((property, index) => (
 						<Col key={index} className="md-4 lg-4">
-						  <PropertyCard property={property} />
+						  <PropertyCard property={property} />						
 						</Col>
-					  ))}
-			 */}
-            </Row>
-          </Container>
-        </div>
-      </div>
-    </>
-  );
-};
+					))}
+              */}
+			
+		</Row>
+		</Container>
+	</div>
+	</div>
+	</>
+	);};
+  export default Properties;
 
-export default Properties;
+

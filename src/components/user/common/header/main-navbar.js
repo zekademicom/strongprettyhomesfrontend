@@ -1,13 +1,8 @@
 import React , {useState}from "react";
 import { Container, Nav, Navbar } from "react-bootstrap";
 import logo from "../../../../assets/img/logo/logo.png";
-import {
-  RiHome3Line,
-  RiHomeHeartFill,
-  RiInformationLine,
-  RiMapPinLine,
-  RiUser3Line
-} from "react-icons/ri";
+import { MdHouseboat} from "react-icons/md";
+import {RiHome3Line,RiInformationLine,RiMapPinLine,} from "react-icons/ri";
 import { Link, useLocation } from "react-router-dom";
 import "./main-navbar.css";
 import UserMenu from "./user-menu";
@@ -49,7 +44,7 @@ setstate(true);
               to="/properties"
               className={currentPath === "/properties" ? "active" : ""}
             >
-              <RiHomeHeartFill /> Properties
+              <MdHouseboat /> Properties
             </Nav.Link>
             <Nav.Link
               as={Link}

@@ -5,6 +5,8 @@ import { propertyInitialState } from "./property/propertyInitialState";
 import { propertyReducer } from "./property/propertyReducer";
 import { searchReducer } from "./search/searchReducer";
 import { searchInitialState } from "./search/searchInitialState";
+import { requestInitialState } from "./tourRequest/requestInitialState";
+import { requestReducer } from "./tourRequest/requestReducer";
 
 // merkezi statin tanimlandigi yer
 
@@ -23,9 +25,13 @@ export const StoreProvider = ({ children }) => {
 
   const [searchState,dispatchSearch] = useReducer(searchReducer, searchInitialState);
 
-  const storeObject = { userState, dispatchUser , propertyState, dispatchProperty, searchState, dispatchSearch};
+  const [requestState,dispatchTourRequest] = useReducer(requestReducer, requestInitialState);
+
+
+  const storeObject = { userState, dispatchUser , propertyState, dispatchProperty, searchState, dispatchSearch,requestState,dispatchTourRequest};
 
   return <Store.Provider value={storeObject}>{children}</Store.Provider>;
+
 };
 
 // comtext api bir parcasi context api 2 sekilde kurulur biri simple birisi de advance yontem.state complexs yapiya sahip degilse ve cok fazla state yoksa simple tercih edilir
