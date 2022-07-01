@@ -14,22 +14,22 @@ import { useFormik } from "formik";
 import * as Yup from "yup";
 import moment from "moment";
 import {
-    makeTourRequest,
+  makeTourRequest,
   isHomeAvailable,
 } from "../../../api/tourRequest-service";
 import { toast } from "react-toastify";
 import { useNavigate } from "react-router-dom";
-import SectionHeader from "../home/section-header/section-header"
+import SectionHeader from "../home/section-header/section-header";
 import { useStore } from "../../../store";
 const TourRequestForm = (tourRequest) => {
-  const {  userState } = useStore();
+  const { userState } = useStore();
   const { isUserLogin } = userState;
-    const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(false);
   const [isPropertyAvailable, setIsPropertyAvailable] = useState(false);
-//   const [totalPrice, setTotalPrice] = useState(0);
+  //   const [totalPrice, setTotalPrice] = useState(0);
   const navigate = useNavigate();
   const initialValues = {
-   tourRequestTime: "",
+    tourRequestTime: "",
     adult: "",
     child: "",
   };
@@ -39,16 +39,12 @@ const TourRequestForm = (tourRequest) => {
     child: Yup.string().required("Select the number of child please."),
   });
   const onSubmit = async (values) => {
-    const {
-        tourRequestTime,
-        adult,
-        child,
-    } = values;
+    const { tourRequestTime, adult, child } = values;
     const dto = {
       propertyId: tourRequest.id,
       tourRequestTime: tourRequestTime,
-     adult: adult,
-     child: child,
+      adult: adult,
+      child: child,
     };
     setLoading(true);
     try {
@@ -56,9 +52,8 @@ const TourRequestForm = (tourRequest) => {
       toast("TourRequest created successfully");
       navigate("/");
     } catch (err) {
-       
       toast(err.response.data.message);
-      console.log(err.response.data.message)
+      console.log(err.response.data.message);
     } finally {
       setLoading(false);
     }
@@ -68,20 +63,19 @@ const TourRequestForm = (tourRequest) => {
     validationSchema,
     onSubmit,
   });
- 
+
   const checkTheHomeIsAvailable = async () => {
     const { tourRequestTime } = formik.values;
     if (!tourRequestTime) return;
     try {
-    
-        const dto = {
-            propertyId: tourRequest.id,
-            tourRequestTime: tourRequestTime,
-          };
+      const dto = {
+        propertyId: tourRequest.id,
+        tourRequestTime: tourRequestTime,
+      };
       setLoading(true);
       const resp = await isHomeAvailable(dto);
-      const { isAvailable} = resp.data;
-      console.log(resp.data)
+      const { isAvailable } = resp.data;
+      console.log(resp.data);
       setIsPropertyAvailable(isAvailable);
       if (!isAvailable) {
         toast(
@@ -93,10 +87,10 @@ const TourRequestForm = (tourRequest) => {
     } finally {
       setLoading(false);
     }
-  }
-    return (
+  };
+  return (
     <div>
-            <SectionHeader title="Tour Request Form" />
+      <SectionHeader title="Tour Request Form" />
       <Form noValidate onSubmit={formik.handleSubmit}>
         <Container>
           <Row>
@@ -106,10 +100,7 @@ const TourRequestForm = (tourRequest) => {
                   type="text"
                   placeholder="adult"
                   {...formik.getFieldProps("adult")}
-                  isInvalid={
-                    formik.touched.adult &&
-                    formik.errors.adult
-                  }
+                  isInvalid={formik.touched.adult && formik.errors.adult}
                 />
                 <Form.Control.Feedback type="invalid">
                   {formik.errors.adult}
@@ -120,10 +111,7 @@ const TourRequestForm = (tourRequest) => {
                   type="text"
                   placeholder="child"
                   {...formik.getFieldProps("child")}
-                  isInvalid={
-                    formik.touched.child &&
-                    formik.errors.child
-                  }
+                  isInvalid={formik.touched.child && formik.errors.child}
                 />
                 <Form.Control.Feedback type="invalid">
                   {formik.errors.child}
@@ -137,7 +125,8 @@ const TourRequestForm = (tourRequest) => {
                     placeholder="tourRequestTime"
                     {...formik.getFieldProps("tourRequestTime")}
                     isInvalid={
-                      formik.touched.tourRequestTime && formik.errors.tourRequestTime
+                      formik.touched.tourRequestTime &&
+                      formik.errors.tourRequestTime
                     }
                     onBlur={checkTheHomeIsAvailable}
                   />
@@ -151,7 +140,8 @@ const TourRequestForm = (tourRequest) => {
                     placeholder="tourRequestTime"
                     {...formik.getFieldProps("tourRequestTime")}
                     isInvalid={
-                      formik.touched.tourRequestTime && formik.errors.tourRequestTime
+                      formik.touched.tourRequestTime &&
+                      formik.errors.tourRequestTime
                     }
                     onBlur={checkTheHomeIsAvailable}
                   />
@@ -160,20 +150,26 @@ const TourRequestForm = (tourRequest) => {
                   </Form.Control.Feedback>
                 </FloatingLabel>
               </InputGroup>
-              </Col>
-              <Col className="text-center">
+            </Col>
+            <Col className="text-center">
               <Button
                 variant="primary"
                 size="lg"
                 type="submit"
-                onClick={ isUserLogin ? (checkTheHomeIsAvailable):(<Container>
-                  <Alert variant="warning">
-                    <h4 className="text-center">
-                      Please log in to system to check the availability of the property and
-                      make tour request.
-                    </h4>
-                  </Alert>
-                </Container>)}
+                onClick={
+                  isUserLogin ? (
+                    checkTheHomeIsAvailable
+                  ) : (
+                    <Container>
+                      <Alert variant="warning">
+                        <h4 className="text-center">
+                          Please log in to system to check the availability of
+                          the property and make tour request.
+                        </h4>
+                      </Alert>
+                    </Container>
+                  )
+                }
                 className={"button-send"}
                 disabled={loading}
               >
@@ -194,7 +190,7 @@ const TourRequestForm = (tourRequest) => {
           </Row>
         </Container>
       </Form>
-            </div>
-  )
-}
-export default TourRequestForm
+    </div>
+  );
+};
+export default TourRequestForm;

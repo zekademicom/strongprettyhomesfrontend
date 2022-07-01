@@ -18,13 +18,10 @@ const PropertyCard = ({ property }) => {
     bedrooms,
     location,
     area,
-    image
+    image,
   } = property;
 
-  console.log(property.image) 
-
   const navigate = useNavigate();
-
   const imageSrc = `${process.env.REACT_APP_API_URL}/files/display/${image[0]}`;
   console.log(imageSrc);
 
@@ -34,13 +31,11 @@ const PropertyCard = ({ property }) => {
         variant="top"
         className="property-card"
         onClick={() => navigate(`/properties/${id}`)}
-       
       >
-        
         <div className="image-container">
           {/* {image.map((imgId, index) => {
             let temp = `${process.env.REACT_APP_API_URL}/files/display/${imgId}`;
-            return <Card.Img variant="top" key={index} src={temp} />;
+            return <Card.Img variant="top" key={index} src={temp} />
           })} */}
           <Card.Img variant="top" src={imageSrc} />
           <span className="type">

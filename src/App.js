@@ -14,8 +14,7 @@ import { setSearch } from "./store/search/searchActions";
 
 const App = () => {
   const [loading, setLoading] = useState(true);
-  const { dispatchUser, dispatchProperty, searchState } = useStore();
-  const { initialSearchValues } = searchState;
+  const { dispatchUser, dispatchProperty } = useStore();
 
 
   const loadData = async () => {
@@ -37,29 +36,11 @@ const App = () => {
     }
   };
 
-  
-
-  const loadSearch = async () => {
-
-    try {
-
-      let response = await getSearchProperties(searchReducer);
-      console.log(response);
-    } catch (error) {
-      console.log(error);
-    }
-    
-  }
-
   useEffect(() => {
     loadData();
   }, []);
 
 
-  
-  useEffect(() => {
-   loadSearch()
-  }, [searchReducer])
   
   if(loading) 
   return(<LoadingPage/>)  
