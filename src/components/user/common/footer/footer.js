@@ -1,13 +1,8 @@
 import React from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import {
-  RiHome3Line,
-  RiCarLine,
-  RiInformationLine,
-  RiMapPinLine,
-  RiUser3Line,
-} from "react-icons/ri";
+import { MdHouseboat} from "react-icons/md";
+import {RiHome3Line,RiInformationLine,RiMapPinLine,} from "react-icons/ri";
 import ContactBar from "./contact-bar";
 import SocialBar from "./socialbar";
 import "./footer.css";
@@ -32,7 +27,7 @@ const Footer = () => {
                   Home
                 </Link>
               </li>
-              <li> <RiCarLine />
+              <li> <MdHouseboat />
                 <Link to="/properties">
                   {" "}
                   Properties
