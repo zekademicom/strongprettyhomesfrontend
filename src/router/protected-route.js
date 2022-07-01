@@ -7,7 +7,8 @@ const ProtectedRoute = ({ children, isAdmin }) => {
   const { isUserLogin, user } = userState;
 
   if (!isUserLogin) return <Navigate to="/auth"/>
-  if(isAdmin && !user.role.includes("Administrator")) return <Navigate to="/unauthorized"/>
+  if(isAdmin && !user.role.includes("Admin")) return <Navigate to="/unauthorized"/>
+
 
   return children;
 

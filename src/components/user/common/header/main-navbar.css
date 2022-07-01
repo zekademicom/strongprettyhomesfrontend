@@ -1,18 +1,13 @@
 .navbar{
-  z-index: 45;
+  z-index: 5;
   width:100%;
-  background-color: rgba(0, 0, 0, 0.756);
+  background-color: rgba(0, 0, 0, 0.644);
   position: fixed !important;
 
 }
 .scroll{
   background-color: rgba(100, 100, 100, 0);
 
-}
-
-.navbar-nav a{
-  font-weight: 400;
-  color: rgb(224, 224, 224) !important;
 }
 
 .navbar .navbar-nav{
@@ -32,13 +27,18 @@
 
 }
 
+
 @media(max-width: 1200px){
   .navbar .navbar-collapse{
-      
+      background-color:var(--color2);
+      border-radius: 1rem;
       padding:2rem;
       box-shadow: 0 0 15px black;
+      
   }
 }
+
+
 
 .navbar-collapse .navbar-nav{
   gap:0.3rem;

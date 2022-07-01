@@ -1,6 +1,5 @@
 import React from 'react'
 import { Col, Container, Row } from "react-bootstrap";
-
 import { BsTextareaResize } from "react-icons/bs";
 import { GiHomeGarage } from "react-icons/gi";
 import { MdLocationOn } from "react-icons/md";
@@ -16,6 +15,7 @@ import { useNavigate } from 'react-router-dom';
 
 
 // arabaya tiklayinca arabanin detayi hem popularcars d hem araba sayfasinda arabaya tiklayinca detay gelsin diyorsak bunu component vehicle-card da yapmaliyiz
+
 const PropertyDetails = ({ property }) => {
   const navigate = useNavigate();
 

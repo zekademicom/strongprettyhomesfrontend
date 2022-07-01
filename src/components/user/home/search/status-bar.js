@@ -13,8 +13,6 @@ const StatusBar = () => {
     <div className="status-bar">
         <div className={isActive ? 'active' : 'passive'} onClick={handleClick}>Rent</div>
         <div className={isActive ? 'passive' : 'active'} onClick={handleClick}>Sale</div>
-
-
       </div>
   )
 }

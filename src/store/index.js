@@ -3,6 +3,10 @@ import { userInitialState } from "./user/userInitialState";
 import { userReducer } from "./user/userReducer";
 import { propertyInitialState } from "./property/propertyInitialState";
 import { propertyReducer } from "./property/propertyReducer";
+import { searchReducer } from "./search/searchReducer";
+import { searchInitialState } from "./search/searchInitialState";
+import { requestInitialState } from "./tourRequest/requestInitialState";
+import { requestReducer } from "./tourRequest/requestReducer";
 
 // merkezi statin tanimlandigi yer
 
@@ -19,9 +23,15 @@ export const StoreProvider = ({ children }) => {
   // vehicle tanımlaması
   const [propertyState,dispatchProperty] = useReducer(propertyReducer,propertyInitialState);
 
-  const storeObject = { userState, dispatchUser , propertyState, dispatchProperty};
+  const [searchState,dispatchSearch] = useReducer(searchReducer, searchInitialState);
+
+  const [requestState,dispatchTourRequest] = useReducer(requestReducer, requestInitialState);
+
+
+  const storeObject = { userState, dispatchUser , propertyState, dispatchProperty, searchState, dispatchSearch,requestState,dispatchTourRequest};
 
   return <Store.Provider value={storeObject}>{children}</Store.Provider>;
+
 };
 
 // comtext api bir parcasi context api 2 sekilde kurulur biri simple birisi de advance yontem.state complexs yapiya sahip degilse ve cok fazla state yoksa simple tercih edilir
