@@ -24,8 +24,7 @@ const PropertyCard = ({ property }) => {
 
   const navigate = useNavigate();
 
-  const imageSrc = `${process.env.REACT_APP_API_URL}/files/display/${image[0]}`;
-
+ const imageSrc = `${process.env.REACT_APP_API_URL}/files/display/${image}`;
 
   return (
     <>
@@ -37,7 +36,7 @@ const PropertyCard = ({ property }) => {
         <div className="image-container">
           {/* {image.map((imgId, index) => {
             let temp = `${process.env.REACT_APP_API_URL}/files/display/${imgId}`;
-            return <Card.Img variant="top" key={index} src={temp} />;
+            return <Card.Img variant="top" key={index} src={temp} />
           })} */}
           <Card.Img variant="top" src={imageSrc} />
           <span className="type">

@@ -7,21 +7,19 @@ import PropertyCard from "../common/property-card/PropertyCard";
 import SearchBar from "../home/search/searchbar";
 import "./inside-search.css";
 
-const Properties = async() => {
+const Properties = () => {
   const { searchState } = useStore();
   const { initialSearchValues } = searchState;
-  const [catchValues, setCatchValues] = useState(initialSearchValues)
+  const { propertyState } = useStore();
+  const { properties } = propertyState;
+  const [catchValues, setCatchValues] = useState([]);
 
-  // const { propertyState } = useStore();
-  // const { properties } = propertyState;
 
-  console.log(initialSearchValues);
-
-  let resp = [];
-
-  resp = await getSearchProperties(initialSearchValues);
-      console.log(resp);
-      setCatchValues(resp);
+  const search = async () => {
+   let resp = await getSearchProperties(initialSearchValues);
+    setCatchValues(resp.data);
+    
+  };
 
   //   let loadSearch = async () => {
 
@@ -34,7 +32,7 @@ const Properties = async() => {
   //   };
 
   useEffect(() => {
-    
+    search();
   }, [initialSearchValues]);
 
   return (
