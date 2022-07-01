@@ -3,10 +3,12 @@ import { Alert, Container,Col,Row } from "react-bootstrap";
 import { useNavigate, useParams } from "react-router-dom";
 import PageHeader from "../../components/user/common/page-header/page-header";
 import Spacer from "../../components/user/common/spacer/spacer";
+
 import PropertyAgent from "../../components/user/agent/property-agent";
 import PropertyDetails from "../../components/user/properties/property-details";
 import SwiperImg from "../../components/user/properties/swiper-img";
 import TourRequestForm from "../../components/user/tour-request/tourRequestForm";
+
 
 import { useStore } from "../../store";
 
@@ -48,6 +50,7 @@ const PropertyDetailsPage = () => {
     </Col>
 </Row>
 </Container>
+
 <Spacer height={40}/>
 
 <Container fluid >
@@ -73,6 +76,7 @@ const PropertyDetailsPage = () => {
     </Col>
 </Row>
 </Container>
+
 
         {/* <HomeFeature features={selectedProperty}/> */}
     

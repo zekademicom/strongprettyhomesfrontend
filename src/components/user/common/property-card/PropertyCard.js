@@ -18,13 +18,12 @@ const PropertyCard = ({ property }) => {
     bedrooms,
     location,
     area,
-    image
+    image,
   } = property;
 
   const navigate = useNavigate();
-
- const imageSrc = `${process.env.REACT_APP_API_URL}/files/display/${image[0]}`;
-// console.log(imageSrc[0].id);
+  const imageSrc = `${process.env.REACT_APP_API_URL}/files/display/${image[0]}`;
+  console.log(imageSrc);
 
   return (
     <>
