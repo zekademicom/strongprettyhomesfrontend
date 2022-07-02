@@ -12,5 +12,5 @@ const UserTemplate = ({children}) => {
     </>
   )
 }
-/*  */
+
 export default UserTemplate
