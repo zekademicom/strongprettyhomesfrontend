@@ -1,11 +1,11 @@
 import React from 'react'
 import { Container } from 'react-bootstrap'
-import AdminUserEdit from '../../components/admins/users/admin-user-edit'
+import { AdminsUsersEdit } from '../../components/admins/users/admin-user-edit'
 
 const AdminUsersEditPage = () => {
   return (
     <Container>
-      <AdminUserEdit/>
+      <AdminsUsersEdit/>
       </Container>
   )
 }
