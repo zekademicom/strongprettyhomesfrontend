@@ -25,7 +25,7 @@ setstate(true);
 
   return (
     <Navbar  expand="xl" className={state ? "navbar " : "scroll"} variant="dark ">
-      <Container className=" " > 
+      <Container > 
         <Navbar.Brand as={Link} to="/">
           <img src={logo} alt="Strong Pretty Homes" />
         </Navbar.Brand>
